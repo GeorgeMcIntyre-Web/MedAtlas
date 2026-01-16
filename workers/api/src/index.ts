@@ -1,5 +1,7 @@
 import type { MedAtlasOutput } from "@medatlas/schemas/types";
 import { handleGraphRequest } from "./graph/routes";
+import { handleReasoningRequest } from "./reasoning/routes";
+import { handleDemoRequest } from "./demo/routes";
 
 type Env = {
   APP_NAME: string;
@@ -28,12 +30,29 @@ export default {
       }
     }
 
+    // Handle reasoning API routes
+    if (url.pathname.startsWith("/reasoning")) {
+      const reasoningResponse = await handleReasoningRequest(request);
+      if (reasoningResponse) {
+        return reasoningResponse;
+      }
+    }
+
+    // Handle demo API routes (new endpoints with :caseId param)
+    if (url.pathname.startsWith("/demo/") && url.pathname !== "/demo/case") {
+      const demoResponse = await handleDemoRequest(request);
+      if (demoResponse) {
+        return demoResponse;
+      }
+    }
+
     // Health check endpoint
     if (url.pathname === "/health") {
       return json({ status: "ok", app: env.APP_NAME });
     }
 
-    // Demo endpoint: returns a schema-shaped example for UX wiring.
+    // Legacy demo endpoint: returns a schema-shaped example for UX wiring.
+    // Maintained for backward compatibility
     if (url.pathname === "/demo/case") {
       const out: MedAtlasOutput = {
         caseId: "demo-001",
