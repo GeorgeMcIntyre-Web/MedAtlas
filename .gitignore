@@ -6,3 +6,8 @@ dist
 .wrangler
 .env
 .DS_Store
+
+# Compiled JS in source directories (TypeScript project)
+apps/*/src/**/*.js
+workers/*/src/**/*.js
+packages/*/src/**/*.js
