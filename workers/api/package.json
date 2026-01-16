@@ -9,7 +9,8 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@medatlas/schemas": "workspace:*"
+    "@medatlas/schemas": "workspace:*",
+    "@medatlas/reasoning": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250129.0",
