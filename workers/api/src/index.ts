@@ -1,4 +1,5 @@
 import type { MedAtlasOutput } from "@medatlas/schemas/types";
+import { handleGraphRequest } from "./graph/routes";
 
 type Env = {
   APP_NAME: string;
@@ -19,47 +20,56 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.pathname !== "/health" && url.pathname !== "/demo/case") {
-      return notFound();
+    // Handle graph API routes
+    if (url.pathname.startsWith("/graph")) {
+      const graphResponse = await handleGraphRequest(request);
+      if (graphResponse) {
+        return graphResponse;
+      }
     }
 
+    // Health check endpoint
     if (url.pathname === "/health") {
       return json({ status: "ok", app: env.APP_NAME });
     }
 
     // Demo endpoint: returns a schema-shaped example for UX wiring.
-    const out: MedAtlasOutput = {
-      caseId: "demo-001",
-      modalities: ["synthetic", "note", "lab"],
-      summary: "Synthetic demo case for MedAtlas UI wiring.",
-      findings: [
-        {
-          label: "Example finding",
-          probability: 0.62,
-          evidence: [{ source: "synthetic", id: "synthetic-obs-001" }]
+    if (url.pathname === "/demo/case") {
+      const out: MedAtlasOutput = {
+        caseId: "demo-001",
+        modalities: ["synthetic", "note", "lab"],
+        summary: "Synthetic demo case for MedAtlas UI wiring.",
+        findings: [
+          {
+            label: "Example finding",
+            probability: 0.62,
+            evidence: [{ source: "synthetic", id: "synthetic-obs-001" }]
+          }
+        ],
+        extractedEntities: [
+          {
+            type: "symptom",
+            text: "headache",
+            evidence: [{ source: "note", id: "note-001" }]
+          }
+        ],
+        recommendations: [
+          "Request clinician review and confirm key data points.",
+          "Acquire imaging modality if clinically indicated."
+        ],
+        uncertainty: {
+          level: "high",
+          reasons: ["Synthetic data", "No imaging provided"]
+        },
+        safety: {
+          notMedicalAdvice: true,
+          requiresClinicianReview: true
         }
-      ],
-      extractedEntities: [
-        {
-          type: "symptom",
-          text: "headache",
-          evidence: [{ source: "note", id: "note-001" }]
-        }
-      ],
-      recommendations: [
-        "Request clinician review and confirm key data points.",
-        "Acquire imaging modality if clinically indicated."
-      ],
-      uncertainty: {
-        level: "high",
-        reasons: ["Synthetic data", "No imaging provided"]
-      },
-      safety: {
-        notMedicalAdvice: true,
-        requiresClinicianReview: true
-      }
-    };
+      };
 
-    return json(out);
+      return json(out);
+    }
+
+    return notFound();
   }
 };
