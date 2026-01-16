@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MedAtlasOutput",
+  "type": "object",
+  "required": [
+    "caseId",
+    "modalities",
+    "summary",
+    "findings",
+    "extractedEntities",
+    "recommendations",
+    "uncertainty",
+    "safety"
+  ],
+  "properties": {
+    "caseId": { "type": "string" },
+    "modalities": { "type": "array", "items": { "type": "string" } },
+    "summary": { "type": "string" },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "evidence"],
+        "properties": {
+          "label": { "type": "string" },
+          "probability": { "type": "number", "minimum": 0, "maximum": 1 },
+          "location": {
+            "type": "object",
+            "properties": {
+              "anatomy": { "type": "string" },
+              "imageRef": { "type": "string" },
+              "sliceIndex": { "type": "integer", "minimum": 0 },
+              "coordinates": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": { "type": "number" }
+              }
+            },
+            "additionalProperties": false
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source", "id"],
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "enum": ["fhir", "dicom", "note", "lab", "device", "claims", "synthetic"]
+                },
+                "id": { "type": "string" },
+                "uri": { "type": "string" },
+                "capturedAt": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "extractedEntities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "text", "evidence"],
+        "properties": {
+          "type": { "type": "string" },
+          "text": { "type": "string" },
+          "value": { "type": "number" },
+          "unit": { "type": "string" },
+          "evidence": { "$ref": "#/properties/findings/items/properties/evidence" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "recommendations": { "type": "array", "items": { "type": "string" } },
+    "uncertainty": {
+      "type": "object",
+      "required": ["level", "reasons"],
+      "properties": {
+        "level": { "type": "string", "enum": ["low", "medium", "high"] },
+        "reasons": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "safety": {
+      "type": "object",
+      "required": ["notMedicalAdvice", "requiresClinicianReview"],
+      "properties": {
+        "notMedicalAdvice": { "const": true },
+        "requiresClinicianReview": { "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,6 @@
+name = "medatlas-api"
+main = "src/index.ts"
+compatibility_date = "2026-01-16"
+
+[vars]
+APP_NAME = "MedAtlas"

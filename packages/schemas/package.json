@@ -1,0 +1,16 @@
+{
+  "name": "@medatlas/schemas",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./medatlas-output.schema.json": "./src/medatlas-output.schema.json",
+    "./types": "./src/types.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
