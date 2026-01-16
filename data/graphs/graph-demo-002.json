@@ -1,0 +1,2837 @@
+{
+  "caseId": "demo-002",
+  "generatedAt": "2026-01-16T07:03:24.387Z",
+  "graph": {
+    "nodes": [
+      {
+        "id": "patient-demo-002-patient-002",
+        "type": "patient",
+        "label": "Patient patient-002",
+        "properties": {
+          "patientId": "patient-002",
+          "age": 62,
+          "gender": "male",
+          "birthDate": "1962-07-22",
+          "mrn": "MRN-87654321"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "patient-002"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "encounter-demo-002-enc-010",
+        "type": "encounter",
+        "label": "ED Visit",
+        "properties": {
+          "encounterId": "enc-010",
+          "type": "ED",
+          "reason": "Chest pain",
+          "status": "finished"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-010",
+            "capturedAt": "2025-01-14T14:20:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:20:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "observation-demo-002-obs-010",
+        "type": "observation",
+        "label": "chief_complaint",
+        "properties": {
+          "observationId": "obs-010",
+          "observationType": "chief_complaint",
+          "value": "Chest pain, substernal",
+          "text": "Patient presents with substernal chest pressure radiating to left arm for 2 hours"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-010",
+            "capturedAt": "2025-01-14T14:25:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:25:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "observation-demo-002-obs-011",
+        "type": "observation",
+        "label": "pain_character",
+        "properties": {
+          "observationId": "obs-011",
+          "observationType": "pain_character",
+          "value": "pressure",
+          "text": "Described as squeezing pressure, 8/10 intensity"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-011",
+            "capturedAt": "2025-01-14T14:25:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:25:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "observation-demo-002-obs-012",
+        "type": "observation",
+        "label": "associated_symptoms",
+        "properties": {
+          "observationId": "obs-012",
+          "observationType": "associated_symptoms",
+          "value": "diaphoresis",
+          "text": "Associated with diaphoresis and shortness of breath"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-012",
+            "capturedAt": "2025-01-14T14:25:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:25:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "vital-demo-002-vital-010",
+        "type": "vital",
+        "label": "Blood Pressure",
+        "properties": {
+          "vitalId": "vital-010",
+          "name": "Blood Pressure",
+          "value": 165,
+          "unit": "mmHg"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-010",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:22:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "vital-demo-002-vital-011",
+        "type": "vital",
+        "label": "Heart Rate",
+        "properties": {
+          "vitalId": "vital-011",
+          "name": "Heart Rate",
+          "value": 110,
+          "unit": "bpm"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-011",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:22:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "vital-demo-002-vital-012",
+        "type": "vital",
+        "label": "SpO2",
+        "properties": {
+          "vitalId": "vital-012",
+          "name": "SpO2",
+          "value": 94,
+          "unit": "%"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-012",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:22:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "vital-demo-002-vital-013",
+        "type": "vital",
+        "label": "Respiratory Rate",
+        "properties": {
+          "vitalId": "vital-013",
+          "name": "Respiratory Rate",
+          "value": 22,
+          "unit": "breaths/min"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-013",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:22:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-trop-1",
+        "type": "lab",
+        "label": "Troponin I",
+        "properties": {
+          "labId": "lab-trop-1",
+          "name": "Troponin I",
+          "code": "10839-9",
+          "value": 0.85,
+          "unit": "ng/mL",
+          "referenceRange": {
+            "low": 0,
+            "high": 0.04
+          },
+          "interpretation": "critical-high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-trop-1",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-bnp",
+        "type": "lab",
+        "label": "BNP",
+        "properties": {
+          "labId": "lab-bnp",
+          "name": "BNP",
+          "code": "42637-9",
+          "value": 450,
+          "unit": "pg/mL",
+          "referenceRange": {
+            "low": 0,
+            "high": 100
+          },
+          "interpretation": "high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-bnp",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-creat-2",
+        "type": "lab",
+        "label": "Creatinine",
+        "properties": {
+          "labId": "lab-creat-2",
+          "name": "Creatinine",
+          "code": "2160-0",
+          "value": 1.4,
+          "unit": "mg/dL",
+          "referenceRange": {
+            "low": 0.7,
+            "high": 1.3
+          },
+          "interpretation": "high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-creat-2",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-glucose",
+        "type": "lab",
+        "label": "Glucose",
+        "properties": {
+          "labId": "lab-glucose",
+          "name": "Glucose",
+          "code": "2345-7",
+          "value": 185,
+          "unit": "mg/dL",
+          "referenceRange": {
+            "low": 70,
+            "high": 100
+          },
+          "interpretation": "high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-glucose",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-ldl",
+        "type": "lab",
+        "label": "LDL Cholesterol",
+        "properties": {
+          "labId": "lab-ldl",
+          "name": "LDL Cholesterol",
+          "code": "13457-7",
+          "value": 165,
+          "unit": "mg/dL",
+          "referenceRange": {
+            "low": 0,
+            "high": 100
+          },
+          "interpretation": "high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-ldl",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-010",
+        "type": "medication",
+        "label": "Aspirin",
+        "properties": {
+          "medicationId": "med-010",
+          "name": "Aspirin",
+          "dosage": "325mg",
+          "route": "PO",
+          "frequency": "once",
+          "status": "completed"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-010",
+            "capturedAt": "2025-01-14T14:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-011",
+        "type": "medication",
+        "label": "Nitroglycerin",
+        "properties": {
+          "medicationId": "med-011",
+          "name": "Nitroglycerin",
+          "dosage": "0.4mg",
+          "route": "SL",
+          "frequency": "q5min x3 PRN",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-011",
+            "capturedAt": "2025-01-14T14:32:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:32:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-012",
+        "type": "medication",
+        "label": "Heparin",
+        "properties": {
+          "medicationId": "med-012",
+          "name": "Heparin",
+          "dosage": "60 units/kg bolus",
+          "route": "IV",
+          "frequency": "once",
+          "status": "completed"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-012",
+            "capturedAt": "2025-01-14T15:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T15:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-013",
+        "type": "medication",
+        "label": "Ticagrelor",
+        "properties": {
+          "medicationId": "med-013",
+          "name": "Ticagrelor",
+          "dosage": "180mg",
+          "route": "PO",
+          "frequency": "loading dose",
+          "status": "completed"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-013",
+            "capturedAt": "2025-01-14T15:05:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T15:05:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "condition-demo-002-cond-010",
+        "type": "condition",
+        "label": "STEMI - Anterior wall",
+        "properties": {
+          "conditionId": "cond-010",
+          "name": "STEMI - Anterior wall",
+          "code": "I21.0",
+          "icdCode": "I21.0",
+          "status": "active",
+          "severity": "severe"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-010",
+            "capturedAt": "2025-01-14T12:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T12:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "condition-demo-002-cond-011",
+        "type": "condition",
+        "label": "Type 2 Diabetes Mellitus",
+        "properties": {
+          "conditionId": "cond-011",
+          "name": "Type 2 Diabetes Mellitus",
+          "code": "E11.9",
+          "icdCode": "E11.9",
+          "status": "active",
+          "severity": "moderate"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-011",
+            "capturedAt": "2025-01-14T14:20:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:20:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "condition-demo-002-cond-012",
+        "type": "condition",
+        "label": "Essential Hypertension",
+        "properties": {
+          "conditionId": "cond-012",
+          "name": "Essential Hypertension",
+          "code": "I10",
+          "icdCode": "I10",
+          "status": "active",
+          "severity": "moderate"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-012",
+            "capturedAt": "2025-01-14T14:20:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:20:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "study-demo-002-study-ecg-001",
+        "type": "study",
+        "label": "other Heart",
+        "properties": {
+          "studyId": "study-ecg-001",
+          "modality": "other",
+          "bodyPart": "Heart",
+          "description": "12-lead ECG"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:28:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-ecg-001",
+        "type": "finding",
+        "label": "ST elevation in leads V1-V4 consistent with anterior STEMI",
+        "properties": {
+          "findingId": "finding-ecg-001",
+          "description": "ST elevation in leads V1-V4 consistent with anterior STEMI",
+          "severity": "severe",
+          "confidence": 0.95,
+          "anatomy": "Anterior wall",
+          "imageRef": "study-ecg-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:28:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-ecg-002",
+        "type": "finding",
+        "label": "Reciprocal ST depression in inferior leads",
+        "properties": {
+          "findingId": "finding-ecg-002",
+          "description": "Reciprocal ST depression in inferior leads",
+          "severity": "moderate",
+          "confidence": 0.9,
+          "anatomy": "Inferior wall",
+          "imageRef": "study-ecg-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:28:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "study-demo-002-study-xr-001",
+        "type": "study",
+        "label": "XR Chest",
+        "properties": {
+          "studyId": "study-xr-001",
+          "modality": "XR",
+          "bodyPart": "Chest",
+          "description": "Portable Chest X-Ray",
+          "accessionNumber": "ACC-2025-005678"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-xr-001",
+        "type": "finding",
+        "label": "Mild pulmonary vascular congestion",
+        "properties": {
+          "findingId": "finding-xr-001",
+          "description": "Mild pulmonary vascular congestion",
+          "severity": "mild",
+          "confidence": 0.85,
+          "anatomy": "Lungs",
+          "imageRef": "study-xr-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-xr-002",
+        "type": "finding",
+        "label": "No focal consolidation or pneumothorax",
+        "properties": {
+          "findingId": "finding-xr-002",
+          "description": "No focal consolidation or pneumothorax",
+          "severity": "mild",
+          "confidence": 0.92,
+          "anatomy": "Lungs",
+          "imageRef": "study-xr-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-xr-003",
+        "type": "finding",
+        "label": "Cardiac silhouette at upper limits of normal",
+        "properties": {
+          "findingId": "finding-xr-003",
+          "description": "Cardiac silhouette at upper limits of normal",
+          "severity": "mild",
+          "confidence": 0.88,
+          "anatomy": "Heart",
+          "imageRef": "study-xr-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "note-demo-002-note-010",
+        "type": "note",
+        "label": "progress Note",
+        "properties": {
+          "noteId": "note-010",
+          "type": "progress",
+          "author": "Dr. Williams, Emergency Medicine",
+          "text": "62-year-old male with PMH of DM2, HTN presents with acute onset substernal chest pain with radiation to left arm and associated diaphoresis. ECG shows ST elevation in V1-V4 consistent with anterior STEMI. Initial troponin markedly elevated. STEMI alert activated. Cardiology consulted for emergent cardiac catheterization. Patient loaded with aspirin and ticagrelor, heparin bolus given. Cath lab team notified, door-to-balloon target in progress.",
+          "excerpt": "62-year-old male with PMH of DM2, HTN presents with acute onset substernal chest pain with radiation to left arm and associated diaphoresis. ECG shows ST elevation in V1-V4 consistent with anterior ST..."
+        },
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-010",
+            "capturedAt": "2025-01-14T15:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T15:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "procedure-demo-002-proc-010",
+        "type": "procedure",
+        "label": "12-lead ECG",
+        "properties": {
+          "procedureId": "proc-010",
+          "name": "12-lead ECG",
+          "code": "93000",
+          "status": "completed",
+          "outcome": "STEMI pattern identified"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-010",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T14:28:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "encounter-demo-002-enc-011",
+        "type": "encounter",
+        "label": "inpatient Visit",
+        "properties": {
+          "encounterId": "enc-011",
+          "type": "inpatient",
+          "reason": "Cardiac catheterization for STEMI",
+          "status": "finished"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-011",
+            "capturedAt": "2025-01-14T15:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T15:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "observation-demo-002-obs-013",
+        "type": "observation",
+        "label": "angiographic_finding",
+        "properties": {
+          "observationId": "obs-013",
+          "observationType": "angiographic_finding",
+          "value": "LAD occlusion",
+          "text": "Complete occlusion of proximal LAD with TIMI 0 flow"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-013",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "observation-demo-002-obs-014",
+        "type": "observation",
+        "label": "intervention_result",
+        "properties": {
+          "observationId": "obs-014",
+          "observationType": "intervention_result",
+          "value": "successful",
+          "text": "Successful PCI with drug-eluting stent placement, TIMI 3 flow restored"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-014",
+            "capturedAt": "2025-01-14T16:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "vital-demo-002-vital-014",
+        "type": "vital",
+        "label": "Blood Pressure",
+        "properties": {
+          "vitalId": "vital-014",
+          "name": "Blood Pressure",
+          "value": 118,
+          "unit": "mmHg"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-014",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T17:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "vital-demo-002-vital-015",
+        "type": "vital",
+        "label": "Heart Rate",
+        "properties": {
+          "vitalId": "vital-015",
+          "name": "Heart Rate",
+          "value": 72,
+          "unit": "bpm"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-015",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T17:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-trop-2",
+        "type": "lab",
+        "label": "Troponin I",
+        "properties": {
+          "labId": "lab-trop-2",
+          "name": "Troponin I",
+          "code": "10839-9",
+          "value": 15.2,
+          "unit": "ng/mL",
+          "referenceRange": {
+            "low": 0,
+            "high": 0.04
+          },
+          "interpretation": "critical-high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-trop-2",
+            "capturedAt": "2025-01-14T20:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T20:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "lab-demo-002-lab-trop-3",
+        "type": "lab",
+        "label": "Troponin I",
+        "properties": {
+          "labId": "lab-trop-3",
+          "name": "Troponin I",
+          "code": "10839-9",
+          "value": 8.5,
+          "unit": "ng/mL",
+          "referenceRange": {
+            "low": 0,
+            "high": 0.04
+          },
+          "interpretation": "critical-high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-trop-3",
+            "capturedAt": "2025-01-15T08:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-014",
+        "type": "medication",
+        "label": "Aspirin",
+        "properties": {
+          "medicationId": "med-014",
+          "name": "Aspirin",
+          "dosage": "81mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-014",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T17:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-015",
+        "type": "medication",
+        "label": "Ticagrelor",
+        "properties": {
+          "medicationId": "med-015",
+          "name": "Ticagrelor",
+          "dosage": "90mg",
+          "route": "PO",
+          "frequency": "BID",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-015",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T17:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-016",
+        "type": "medication",
+        "label": "Metoprolol Succinate",
+        "properties": {
+          "medicationId": "med-016",
+          "name": "Metoprolol Succinate",
+          "dosage": "25mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-016",
+            "capturedAt": "2025-01-15T08:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-017",
+        "type": "medication",
+        "label": "Lisinopril",
+        "properties": {
+          "medicationId": "med-017",
+          "name": "Lisinopril",
+          "dosage": "5mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-017",
+            "capturedAt": "2025-01-15T08:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "medication-demo-002-med-018",
+        "type": "medication",
+        "label": "Atorvastatin",
+        "properties": {
+          "medicationId": "med-018",
+          "name": "Atorvastatin",
+          "dosage": "80mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-018",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T17:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "study-demo-002-study-cath-001",
+        "type": "study",
+        "label": "other Heart",
+        "properties": {
+          "studyId": "study-cath-001",
+          "modality": "other",
+          "bodyPart": "Heart",
+          "description": "Left heart catheterization with coronary angiography",
+          "accessionNumber": "CATH-2025-001234"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-cath-001",
+        "type": "finding",
+        "label": "100% occlusion of proximal LAD",
+        "properties": {
+          "findingId": "finding-cath-001",
+          "description": "100% occlusion of proximal LAD",
+          "severity": "severe",
+          "confidence": 1,
+          "anatomy": "Left anterior descending artery",
+          "imageRef": "study-cath-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-cath-002",
+        "type": "finding",
+        "label": "50% stenosis of mid-RCA",
+        "properties": {
+          "findingId": "finding-cath-002",
+          "description": "50% stenosis of mid-RCA",
+          "severity": "moderate",
+          "confidence": 0.95,
+          "anatomy": "Right coronary artery",
+          "imageRef": "study-cath-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-cath-003",
+        "type": "finding",
+        "label": "Left main patent, LCx with mild disease",
+        "properties": {
+          "findingId": "finding-cath-003",
+          "description": "Left main patent, LCx with mild disease",
+          "severity": "mild",
+          "confidence": 0.92,
+          "anatomy": "Left circumflex",
+          "imageRef": "study-cath-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "study-demo-002-study-echo-001",
+        "type": "study",
+        "label": "US Heart",
+        "properties": {
+          "studyId": "study-echo-001",
+          "modality": "US",
+          "bodyPart": "Heart",
+          "description": "Transthoracic Echocardiogram",
+          "accessionNumber": "ECHO-2025-001234"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-echo-001",
+        "type": "finding",
+        "label": "Ejection fraction 40%, reduced from presumed baseline",
+        "properties": {
+          "findingId": "finding-echo-001",
+          "description": "Ejection fraction 40%, reduced from presumed baseline",
+          "severity": "moderate",
+          "confidence": 0.9,
+          "anatomy": "Left ventricle",
+          "imageRef": "study-echo-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-echo-002",
+        "type": "finding",
+        "label": "Anterior and apical wall motion abnormality",
+        "properties": {
+          "findingId": "finding-echo-002",
+          "description": "Anterior and apical wall motion abnormality",
+          "severity": "moderate",
+          "confidence": 0.92,
+          "anatomy": "Left ventricle",
+          "imageRef": "study-echo-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "finding-demo-002-finding-echo-003",
+        "type": "finding",
+        "label": "No significant valvular disease",
+        "properties": {
+          "findingId": "finding-echo-003",
+          "description": "No significant valvular disease",
+          "severity": "mild",
+          "confidence": 0.95,
+          "anatomy": "Cardiac valves",
+          "imageRef": "study-echo-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "note-demo-002-note-011",
+        "type": "note",
+        "label": "procedure Note",
+        "properties": {
+          "noteId": "note-011",
+          "type": "procedure",
+          "author": "Dr. Chen, Interventional Cardiology",
+          "text": "Patient underwent emergent cardiac catheterization for anterior STEMI. Angiography revealed complete occlusion of proximal LAD. Successful primary PCI performed with placement of 3.5x24mm drug-eluting stent. TIMI 3 flow restored. Door-to-balloon time 65 minutes. Patient tolerated procedure well. Transferred to CCU for monitoring. Continue DAPT, beta-blocker, ACE inhibitor, and high-intensity statin.",
+          "excerpt": "Patient underwent emergent cardiac catheterization for anterior STEMI. Angiography revealed complete occlusion of proximal LAD. Successful primary PCI performed with placement of 3.5x24mm drug-eluting..."
+        },
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-011",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T17:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "note-demo-002-note-012",
+        "type": "note",
+        "label": "progress Note",
+        "properties": {
+          "noteId": "note-012",
+          "type": "progress",
+          "author": "Dr. Chen, Interventional Cardiology",
+          "text": "Post-PCI day 1. Patient hemodynamically stable. Chest pain resolved. Troponins trending down. Echo shows EF 40% with anterior WMA consistent with infarct. Will continue medical optimization. Cardiac rehab referral placed. Risk factor modification discussed including diabetes and hypertension control.",
+          "excerpt": "Post-PCI day 1. Patient hemodynamically stable. Chest pain resolved. Troponins trending down. Echo shows EF 40% with anterior WMA consistent with infarct. Will continue medical optimization. Cardiac r..."
+        },
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-012",
+            "capturedAt": "2025-01-15T12:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T12:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "procedure-demo-002-proc-011",
+        "type": "procedure",
+        "label": "Percutaneous coronary intervention with stent placement",
+        "properties": {
+          "procedureId": "proc-011",
+          "name": "Percutaneous coronary intervention with stent placement",
+          "code": "92928",
+          "status": "completed",
+          "outcome": "Successful revascularization, TIMI 3 flow"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-011",
+            "capturedAt": "2025-01-14T16:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-14T16:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-encounter-demo-002-enc-010-patient-demo-002-patient-002-observed-in",
+        "source": "encounter-demo-002-enc-010",
+        "target": "patient-demo-002-patient-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-010"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-observation-demo-002-obs-010-encounter-demo-002-enc-010-observed-in",
+        "source": "observation-demo-002-obs-010",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-observation-demo-002-obs-011-encounter-demo-002-enc-010-observed-in",
+        "source": "observation-demo-002-obs-011",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-observation-demo-002-obs-012-encounter-demo-002-enc-010-observed-in",
+        "source": "observation-demo-002-obs-012",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-vital-demo-002-vital-010-encounter-demo-002-enc-010-observed-in",
+        "source": "vital-demo-002-vital-010",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-vital-demo-002-vital-011-encounter-demo-002-enc-010-observed-in",
+        "source": "vital-demo-002-vital-011",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-vital-demo-002-vital-012-encounter-demo-002-enc-010-observed-in",
+        "source": "vital-demo-002-vital-012",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-vital-demo-002-vital-013-encounter-demo-002-enc-010-observed-in",
+        "source": "vital-demo-002-vital-013",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-trop-1-encounter-demo-002-enc-010-observed-in",
+        "source": "lab-demo-002-lab-trop-1",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-bnp-encounter-demo-002-enc-010-observed-in",
+        "source": "lab-demo-002-lab-bnp",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-creat-2-encounter-demo-002-enc-010-observed-in",
+        "source": "lab-demo-002-lab-creat-2",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-glucose-encounter-demo-002-enc-010-observed-in",
+        "source": "lab-demo-002-lab-glucose",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-ldl-encounter-demo-002-enc-010-observed-in",
+        "source": "lab-demo-002-lab-ldl",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-010-encounter-demo-002-enc-010-observed-in",
+        "source": "medication-demo-002-med-010",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-011-encounter-demo-002-enc-010-observed-in",
+        "source": "medication-demo-002-med-011",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-012-encounter-demo-002-enc-010-observed-in",
+        "source": "medication-demo-002-med-012",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-013-encounter-demo-002-enc-010-observed-in",
+        "source": "medication-demo-002-med-013",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-condition-demo-002-cond-010-encounter-demo-002-enc-010-observed-in",
+        "source": "condition-demo-002-cond-010",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-condition-demo-002-cond-011-encounter-demo-002-enc-010-observed-in",
+        "source": "condition-demo-002-cond-011",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-condition-demo-002-cond-012-encounter-demo-002-enc-010-observed-in",
+        "source": "condition-demo-002-cond-012",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-study-demo-002-study-ecg-001-encounter-demo-002-enc-010-observed-in",
+        "source": "study-demo-002-study-ecg-001",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-ecg-001-study-demo-002-study-ecg-001-derived-from",
+        "source": "finding-demo-002-finding-ecg-001",
+        "target": "study-demo-002-study-ecg-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-ecg-001-lab-demo-002-lab-trop-1-matches",
+        "source": "finding-demo-002-finding-ecg-001",
+        "target": "lab-demo-002-lab-trop-1",
+        "type": "matches",
+        "label": "matches",
+        "properties": {
+          "confidence": 0.95
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001"
+          },
+          {
+            "source": "lab",
+            "id": "lab-trop-1"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-ecg-002-study-demo-002-study-ecg-001-derived-from",
+        "source": "finding-demo-002-finding-ecg-002",
+        "target": "study-demo-002-study-ecg-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-study-demo-002-study-xr-001-encounter-demo-002-enc-010-observed-in",
+        "source": "study-demo-002-study-xr-001",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-xr-001-study-demo-002-study-xr-001-derived-from",
+        "source": "finding-demo-002-finding-xr-001",
+        "target": "study-demo-002-study-xr-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-xr-001-lab-demo-002-lab-bnp-matches",
+        "source": "finding-demo-002-finding-xr-001",
+        "target": "lab-demo-002-lab-bnp",
+        "type": "matches",
+        "label": "matches",
+        "properties": {
+          "confidence": 0.85
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001"
+          },
+          {
+            "source": "lab",
+            "id": "lab-bnp"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-xr-002-study-demo-002-study-xr-001-derived-from",
+        "source": "finding-demo-002-finding-xr-002",
+        "target": "study-demo-002-study-xr-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-xr-003-study-demo-002-study-xr-001-derived-from",
+        "source": "finding-demo-002-finding-xr-003",
+        "target": "study-demo-002-study-xr-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-note-demo-002-note-010-encounter-demo-002-enc-010-observed-in",
+        "source": "note-demo-002-note-010",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-procedure-demo-002-proc-010-encounter-demo-002-enc-010-observed-in",
+        "source": "procedure-demo-002-proc-010",
+        "target": "encounter-demo-002-enc-010",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-010-condition-demo-002-cond-010-treats",
+        "source": "medication-demo-002-med-010",
+        "target": "condition-demo-002-cond-010",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-010-condition-demo-002-cond-011-treats",
+        "source": "medication-demo-002-med-010",
+        "target": "condition-demo-002-cond-011",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-010-condition-demo-002-cond-012-treats",
+        "source": "medication-demo-002-med-010",
+        "target": "condition-demo-002-cond-012",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-011-condition-demo-002-cond-010-treats",
+        "source": "medication-demo-002-med-011",
+        "target": "condition-demo-002-cond-010",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-011-condition-demo-002-cond-011-treats",
+        "source": "medication-demo-002-med-011",
+        "target": "condition-demo-002-cond-011",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-011-condition-demo-002-cond-012-treats",
+        "source": "medication-demo-002-med-011",
+        "target": "condition-demo-002-cond-012",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-012-condition-demo-002-cond-010-treats",
+        "source": "medication-demo-002-med-012",
+        "target": "condition-demo-002-cond-010",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-012-condition-demo-002-cond-011-treats",
+        "source": "medication-demo-002-med-012",
+        "target": "condition-demo-002-cond-011",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-012-condition-demo-002-cond-012-treats",
+        "source": "medication-demo-002-med-012",
+        "target": "condition-demo-002-cond-012",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-013-condition-demo-002-cond-010-treats",
+        "source": "medication-demo-002-med-013",
+        "target": "condition-demo-002-cond-010",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-013-condition-demo-002-cond-011-treats",
+        "source": "medication-demo-002-med-013",
+        "target": "condition-demo-002-cond-011",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-013-condition-demo-002-cond-012-treats",
+        "source": "medication-demo-002-med-013",
+        "target": "condition-demo-002-cond-012",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-encounter-demo-002-enc-011-patient-demo-002-patient-002-observed-in",
+        "source": "encounter-demo-002-enc-011",
+        "target": "patient-demo-002-patient-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-011"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-observation-demo-002-obs-013-encounter-demo-002-enc-011-observed-in",
+        "source": "observation-demo-002-obs-013",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-observation-demo-002-obs-014-encounter-demo-002-enc-011-observed-in",
+        "source": "observation-demo-002-obs-014",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-vital-demo-002-vital-014-encounter-demo-002-enc-011-observed-in",
+        "source": "vital-demo-002-vital-014",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-vital-demo-002-vital-015-encounter-demo-002-enc-011-observed-in",
+        "source": "vital-demo-002-vital-015",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-trop-2-encounter-demo-002-enc-011-observed-in",
+        "source": "lab-demo-002-lab-trop-2",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-lab-demo-002-lab-trop-3-encounter-demo-002-enc-011-observed-in",
+        "source": "lab-demo-002-lab-trop-3",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-014-encounter-demo-002-enc-011-observed-in",
+        "source": "medication-demo-002-med-014",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-015-encounter-demo-002-enc-011-observed-in",
+        "source": "medication-demo-002-med-015",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-016-encounter-demo-002-enc-011-observed-in",
+        "source": "medication-demo-002-med-016",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-017-encounter-demo-002-enc-011-observed-in",
+        "source": "medication-demo-002-med-017",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-medication-demo-002-med-018-encounter-demo-002-enc-011-observed-in",
+        "source": "medication-demo-002-med-018",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-study-demo-002-study-cath-001-encounter-demo-002-enc-011-observed-in",
+        "source": "study-demo-002-study-cath-001",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-cath-001-study-demo-002-study-cath-001-derived-from",
+        "source": "finding-demo-002-finding-cath-001",
+        "target": "study-demo-002-study-cath-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-cath-002-study-demo-002-study-cath-001-derived-from",
+        "source": "finding-demo-002-finding-cath-002",
+        "target": "study-demo-002-study-cath-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-cath-003-study-demo-002-study-cath-001-derived-from",
+        "source": "finding-demo-002-finding-cath-003",
+        "target": "study-demo-002-study-cath-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-study-demo-002-study-echo-001-encounter-demo-002-enc-011-observed-in",
+        "source": "study-demo-002-study-echo-001",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-echo-001-study-demo-002-study-echo-001-derived-from",
+        "source": "finding-demo-002-finding-echo-001",
+        "target": "study-demo-002-study-echo-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-echo-002-study-demo-002-study-echo-001-derived-from",
+        "source": "finding-demo-002-finding-echo-002",
+        "target": "study-demo-002-study-echo-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-finding-demo-002-finding-echo-003-study-demo-002-study-echo-001-derived-from",
+        "source": "finding-demo-002-finding-echo-003",
+        "target": "study-demo-002-study-echo-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-note-demo-002-note-011-encounter-demo-002-enc-011-observed-in",
+        "source": "note-demo-002-note-011",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-note-demo-002-note-012-encounter-demo-002-enc-011-observed-in",
+        "source": "note-demo-002-note-012",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-procedure-demo-002-proc-011-encounter-demo-002-enc-011-observed-in",
+        "source": "procedure-demo-002-proc-011",
+        "target": "encounter-demo-002-enc-011",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      },
+      {
+        "id": "edge-encounter-demo-002-enc-010-encounter-demo-002-enc-011-precedes",
+        "source": "encounter-demo-002-enc-010",
+        "target": "encounter-demo-002-enc-011",
+        "type": "precedes",
+        "label": "precedes",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.387Z"
+      }
+    ]
+  },
+  "timeline": {
+    "patientId": "patient-002",
+    "events": [
+      {
+        "id": "condition-demo-002-cond-010",
+        "type": "condition",
+        "timestamp": "2025-01-14T12:00:00Z",
+        "title": "STEMI - Anterior wall",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-010",
+            "capturedAt": "2025-01-14T12:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "medication-demo-002-med-010",
+          "medication-demo-002-med-011",
+          "medication-demo-002-med-012",
+          "medication-demo-002-med-013"
+        ]
+      },
+      {
+        "id": "encounter-demo-002-enc-010",
+        "type": "encounter",
+        "timestamp": "2025-01-14T14:20:00Z",
+        "title": "ED Visit",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-010",
+            "capturedAt": "2025-01-14T14:20:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "patient-demo-002-patient-002",
+          "observation-demo-002-obs-010",
+          "observation-demo-002-obs-011",
+          "observation-demo-002-obs-012",
+          "vital-demo-002-vital-010",
+          "vital-demo-002-vital-011",
+          "vital-demo-002-vital-012",
+          "vital-demo-002-vital-013",
+          "lab-demo-002-lab-trop-1",
+          "lab-demo-002-lab-bnp",
+          "lab-demo-002-lab-creat-2",
+          "lab-demo-002-lab-glucose",
+          "lab-demo-002-lab-ldl",
+          "medication-demo-002-med-010",
+          "medication-demo-002-med-011",
+          "medication-demo-002-med-012",
+          "medication-demo-002-med-013",
+          "condition-demo-002-cond-010",
+          "condition-demo-002-cond-011",
+          "condition-demo-002-cond-012",
+          "study-demo-002-study-ecg-001",
+          "study-demo-002-study-xr-001",
+          "note-demo-002-note-010",
+          "procedure-demo-002-proc-010",
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "condition-demo-002-cond-011",
+        "type": "condition",
+        "timestamp": "2025-01-14T14:20:00Z",
+        "title": "Type 2 Diabetes Mellitus",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-011",
+            "capturedAt": "2025-01-14T14:20:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "medication-demo-002-med-010",
+          "medication-demo-002-med-011",
+          "medication-demo-002-med-012",
+          "medication-demo-002-med-013"
+        ]
+      },
+      {
+        "id": "condition-demo-002-cond-012",
+        "type": "condition",
+        "timestamp": "2025-01-14T14:20:00Z",
+        "title": "Essential Hypertension",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-012",
+            "capturedAt": "2025-01-14T14:20:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "medication-demo-002-med-010",
+          "medication-demo-002-med-011",
+          "medication-demo-002-med-012",
+          "medication-demo-002-med-013"
+        ]
+      },
+      {
+        "id": "vital-demo-002-vital-010",
+        "type": "vital",
+        "timestamp": "2025-01-14T14:22:00Z",
+        "title": "Blood Pressure",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-010",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "vital-demo-002-vital-011",
+        "type": "vital",
+        "timestamp": "2025-01-14T14:22:00Z",
+        "title": "Heart Rate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-011",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "vital-demo-002-vital-012",
+        "type": "vital",
+        "timestamp": "2025-01-14T14:22:00Z",
+        "title": "SpO2",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-012",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "vital-demo-002-vital-013",
+        "type": "vital",
+        "timestamp": "2025-01-14T14:22:00Z",
+        "title": "Respiratory Rate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-013",
+            "capturedAt": "2025-01-14T14:22:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "observation-demo-002-obs-010",
+        "type": "observation",
+        "timestamp": "2025-01-14T14:25:00Z",
+        "title": "chief_complaint",
+        "summary": "Patient presents with substernal chest pressure radiating to left arm for 2 hours",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-010",
+            "capturedAt": "2025-01-14T14:25:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "observation-demo-002-obs-011",
+        "type": "observation",
+        "timestamp": "2025-01-14T14:25:00Z",
+        "title": "pain_character",
+        "summary": "Described as squeezing pressure, 8/10 intensity",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-011",
+            "capturedAt": "2025-01-14T14:25:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "observation-demo-002-obs-012",
+        "type": "observation",
+        "timestamp": "2025-01-14T14:25:00Z",
+        "title": "associated_symptoms",
+        "summary": "Associated with diaphoresis and shortness of breath",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-012",
+            "capturedAt": "2025-01-14T14:25:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "study-demo-002-study-ecg-001",
+        "type": "study",
+        "timestamp": "2025-01-14T14:28:00Z",
+        "title": "other Heart",
+        "summary": "12-lead ECG",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "finding-demo-002-finding-ecg-001",
+          "finding-demo-002-finding-ecg-002"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-ecg-001",
+        "type": "finding",
+        "timestamp": "2025-01-14T14:28:00Z",
+        "title": "ST elevation in leads V1-V4 consistent with anterior STEMI",
+        "summary": "ST elevation in leads V1-V4 consistent with anterior STEMI",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-ecg-001",
+          "lab-demo-002-lab-trop-1"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-ecg-002",
+        "type": "finding",
+        "timestamp": "2025-01-14T14:28:00Z",
+        "title": "Reciprocal ST depression in inferior leads",
+        "summary": "Reciprocal ST depression in inferior leads",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ecg-001",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-ecg-001"
+        ]
+      },
+      {
+        "id": "procedure-demo-002-proc-010",
+        "type": "procedure",
+        "timestamp": "2025-01-14T14:28:00Z",
+        "title": "12-lead ECG",
+        "summary": "STEMI pattern identified",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-010",
+            "capturedAt": "2025-01-14T14:28:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-010",
+        "type": "medication",
+        "timestamp": "2025-01-14T14:30:00Z",
+        "title": "Aspirin",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-010",
+            "capturedAt": "2025-01-14T14:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "condition-demo-002-cond-010",
+          "condition-demo-002-cond-011",
+          "condition-demo-002-cond-012"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-011",
+        "type": "medication",
+        "timestamp": "2025-01-14T14:32:00Z",
+        "title": "Nitroglycerin",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-011",
+            "capturedAt": "2025-01-14T14:32:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "condition-demo-002-cond-010",
+          "condition-demo-002-cond-011",
+          "condition-demo-002-cond-012"
+        ]
+      },
+      {
+        "id": "study-demo-002-study-xr-001",
+        "type": "study",
+        "timestamp": "2025-01-14T14:35:00Z",
+        "title": "XR Chest",
+        "summary": "Portable Chest X-Ray",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "finding-demo-002-finding-xr-001",
+          "finding-demo-002-finding-xr-002",
+          "finding-demo-002-finding-xr-003"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-xr-001",
+        "type": "finding",
+        "timestamp": "2025-01-14T14:35:00Z",
+        "title": "Mild pulmonary vascular congestion",
+        "summary": "Mild pulmonary vascular congestion",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-xr-001",
+          "lab-demo-002-lab-bnp"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-xr-002",
+        "type": "finding",
+        "timestamp": "2025-01-14T14:35:00Z",
+        "title": "No focal consolidation or pneumothorax",
+        "summary": "No focal consolidation or pneumothorax",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-xr-001"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-xr-003",
+        "type": "finding",
+        "timestamp": "2025-01-14T14:35:00Z",
+        "title": "Cardiac silhouette at upper limits of normal",
+        "summary": "Cardiac silhouette at upper limits of normal",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-xr-001",
+            "capturedAt": "2025-01-14T14:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-xr-001"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-trop-1",
+        "type": "lab",
+        "timestamp": "2025-01-14T14:45:00Z",
+        "title": "Troponin I",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-trop-1",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "finding-demo-002-finding-ecg-001"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-bnp",
+        "type": "lab",
+        "timestamp": "2025-01-14T14:45:00Z",
+        "title": "BNP",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-bnp",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "finding-demo-002-finding-xr-001"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-creat-2",
+        "type": "lab",
+        "timestamp": "2025-01-14T14:45:00Z",
+        "title": "Creatinine",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-creat-2",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-glucose",
+        "type": "lab",
+        "timestamp": "2025-01-14T14:45:00Z",
+        "title": "Glucose",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-glucose",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-ldl",
+        "type": "lab",
+        "timestamp": "2025-01-14T14:45:00Z",
+        "title": "LDL Cholesterol",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-ldl",
+            "capturedAt": "2025-01-14T14:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-012",
+        "type": "medication",
+        "timestamp": "2025-01-14T15:00:00Z",
+        "title": "Heparin",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-012",
+            "capturedAt": "2025-01-14T15:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "condition-demo-002-cond-010",
+          "condition-demo-002-cond-011",
+          "condition-demo-002-cond-012"
+        ]
+      },
+      {
+        "id": "note-demo-002-note-010",
+        "type": "note",
+        "timestamp": "2025-01-14T15:00:00Z",
+        "title": "progress Note",
+        "summary": "62-year-old male with PMH of DM2, HTN presents with acute onset substernal chest pain with radiation to left arm and associated diaphoresis. ECG shows ST elevation in V1-V4 consistent with anterior STEMI. Initial troponin markedly elevated. STEMI alert activated. Cardiology consulted for emergent cardiac catheterization. Patient loaded with aspirin and ticagrelor, heparin bolus given. Cath lab team notified, door-to-balloon target in progress.",
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-010",
+            "capturedAt": "2025-01-14T15:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-013",
+        "type": "medication",
+        "timestamp": "2025-01-14T15:05:00Z",
+        "title": "Ticagrelor",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-013",
+            "capturedAt": "2025-01-14T15:05:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-010",
+          "condition-demo-002-cond-010",
+          "condition-demo-002-cond-011",
+          "condition-demo-002-cond-012"
+        ]
+      },
+      {
+        "id": "encounter-demo-002-enc-011",
+        "type": "encounter",
+        "timestamp": "2025-01-14T15:30:00Z",
+        "title": "inpatient Visit",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-011",
+            "capturedAt": "2025-01-14T15:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "patient-demo-002-patient-002",
+          "observation-demo-002-obs-013",
+          "observation-demo-002-obs-014",
+          "vital-demo-002-vital-014",
+          "vital-demo-002-vital-015",
+          "lab-demo-002-lab-trop-2",
+          "lab-demo-002-lab-trop-3",
+          "medication-demo-002-med-014",
+          "medication-demo-002-med-015",
+          "medication-demo-002-med-016",
+          "medication-demo-002-med-017",
+          "medication-demo-002-med-018",
+          "study-demo-002-study-cath-001",
+          "study-demo-002-study-echo-001",
+          "note-demo-002-note-011",
+          "note-demo-002-note-012",
+          "procedure-demo-002-proc-011",
+          "encounter-demo-002-enc-010"
+        ]
+      },
+      {
+        "id": "observation-demo-002-obs-013",
+        "type": "observation",
+        "timestamp": "2025-01-14T16:00:00Z",
+        "title": "angiographic_finding",
+        "summary": "Complete occlusion of proximal LAD with TIMI 0 flow",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-013",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "study-demo-002-study-cath-001",
+        "type": "study",
+        "timestamp": "2025-01-14T16:00:00Z",
+        "title": "other Heart",
+        "summary": "Left heart catheterization with coronary angiography",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011",
+          "finding-demo-002-finding-cath-001",
+          "finding-demo-002-finding-cath-002",
+          "finding-demo-002-finding-cath-003"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-cath-001",
+        "type": "finding",
+        "timestamp": "2025-01-14T16:00:00Z",
+        "title": "100% occlusion of proximal LAD",
+        "summary": "100% occlusion of proximal LAD",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-cath-001"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-cath-002",
+        "type": "finding",
+        "timestamp": "2025-01-14T16:00:00Z",
+        "title": "50% stenosis of mid-RCA",
+        "summary": "50% stenosis of mid-RCA",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-cath-001"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-cath-003",
+        "type": "finding",
+        "timestamp": "2025-01-14T16:00:00Z",
+        "title": "Left main patent, LCx with mild disease",
+        "summary": "Left main patent, LCx with mild disease",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-cath-001",
+            "capturedAt": "2025-01-14T16:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-cath-001"
+        ]
+      },
+      {
+        "id": "observation-demo-002-obs-014",
+        "type": "observation",
+        "timestamp": "2025-01-14T16:45:00Z",
+        "title": "intervention_result",
+        "summary": "Successful PCI with drug-eluting stent placement, TIMI 3 flow restored",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-014",
+            "capturedAt": "2025-01-14T16:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "procedure-demo-002-proc-011",
+        "type": "procedure",
+        "timestamp": "2025-01-14T16:45:00Z",
+        "title": "Percutaneous coronary intervention with stent placement",
+        "summary": "Successful revascularization, TIMI 3 flow",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-011",
+            "capturedAt": "2025-01-14T16:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "vital-demo-002-vital-014",
+        "type": "vital",
+        "timestamp": "2025-01-14T17:00:00Z",
+        "title": "Blood Pressure",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-014",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "vital-demo-002-vital-015",
+        "type": "vital",
+        "timestamp": "2025-01-14T17:00:00Z",
+        "title": "Heart Rate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-015",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-014",
+        "type": "medication",
+        "timestamp": "2025-01-14T17:00:00Z",
+        "title": "Aspirin",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-014",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-015",
+        "type": "medication",
+        "timestamp": "2025-01-14T17:00:00Z",
+        "title": "Ticagrelor",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-015",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-018",
+        "type": "medication",
+        "timestamp": "2025-01-14T17:00:00Z",
+        "title": "Atorvastatin",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-018",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "note-demo-002-note-011",
+        "type": "note",
+        "timestamp": "2025-01-14T17:00:00Z",
+        "title": "procedure Note",
+        "summary": "Patient underwent emergent cardiac catheterization for anterior STEMI. Angiography revealed complete occlusion of proximal LAD. Successful primary PCI performed with placement of 3.5x24mm drug-eluting stent. TIMI 3 flow restored. Door-to-balloon time 65 minutes. Patient tolerated procedure well. Transferred to CCU for monitoring. Continue DAPT, beta-blocker, ACE inhibitor, and high-intensity statin.",
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-011",
+            "capturedAt": "2025-01-14T17:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-trop-2",
+        "type": "lab",
+        "timestamp": "2025-01-14T20:00:00Z",
+        "title": "Troponin I",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-trop-2",
+            "capturedAt": "2025-01-14T20:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "lab-demo-002-lab-trop-3",
+        "type": "lab",
+        "timestamp": "2025-01-15T08:00:00Z",
+        "title": "Troponin I",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-trop-3",
+            "capturedAt": "2025-01-15T08:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-016",
+        "type": "medication",
+        "timestamp": "2025-01-15T08:00:00Z",
+        "title": "Metoprolol Succinate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-016",
+            "capturedAt": "2025-01-15T08:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "medication-demo-002-med-017",
+        "type": "medication",
+        "timestamp": "2025-01-15T08:00:00Z",
+        "title": "Lisinopril",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-017",
+            "capturedAt": "2025-01-15T08:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      },
+      {
+        "id": "study-demo-002-study-echo-001",
+        "type": "study",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "US Heart",
+        "summary": "Transthoracic Echocardiogram",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011",
+          "finding-demo-002-finding-echo-001",
+          "finding-demo-002-finding-echo-002",
+          "finding-demo-002-finding-echo-003"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-echo-001",
+        "type": "finding",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "Ejection fraction 40%, reduced from presumed baseline",
+        "summary": "Ejection fraction 40%, reduced from presumed baseline",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-echo-001"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-echo-002",
+        "type": "finding",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "Anterior and apical wall motion abnormality",
+        "summary": "Anterior and apical wall motion abnormality",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-echo-001"
+        ]
+      },
+      {
+        "id": "finding-demo-002-finding-echo-003",
+        "type": "finding",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "No significant valvular disease",
+        "summary": "No significant valvular disease",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-echo-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-002-study-echo-001"
+        ]
+      },
+      {
+        "id": "note-demo-002-note-012",
+        "type": "note",
+        "timestamp": "2025-01-15T12:00:00Z",
+        "title": "progress Note",
+        "summary": "Post-PCI day 1. Patient hemodynamically stable. Chest pain resolved. Troponins trending down. Echo shows EF 40% with anterior WMA consistent with infarct. Will continue medical optimization. Cardiac rehab referral placed. Risk factor modification discussed including diabetes and hypertension control.",
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-012",
+            "capturedAt": "2025-01-15T12:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-002-enc-011"
+        ]
+      }
+    ],
+    "dateRange": {
+      "start": "2025-01-14T12:00:00Z",
+      "end": "2025-01-15T12:00:00Z"
+    }
+  },
+  "metadata": {
+    "totalNodes": 53,
+    "totalEdges": 67,
+    "nodesByType": {
+      "patient": 1,
+      "encounter": 2,
+      "observation": 5,
+      "vital": 6,
+      "lab": 7,
+      "medication": 9,
+      "condition": 3,
+      "study": 4,
+      "finding": 11,
+      "note": 3,
+      "procedure": 2
+    },
+    "edgesByType": {
+      "observed-in": 41,
+      "derived-from": 11,
+      "matches": 2,
+      "treats": 12,
+      "precedes": 1
+    }
+  }
+}

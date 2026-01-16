@@ -4,6 +4,7 @@
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "demo:seed": "node scripts/seed-demo.mjs",
+    "demo:seed-graph": "node scripts/seed-graph-demo.mjs",
     "format": "prettier . --write",
     "lint": "eslint .",
     "typecheck": "pnpm -r typecheck"
