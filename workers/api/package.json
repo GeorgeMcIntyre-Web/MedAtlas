@@ -9,6 +9,7 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
+    "@medatlas/reasoning": "workspace:*",
     "@medatlas/schemas": "workspace:*"
   },
   "devDependencies": {
