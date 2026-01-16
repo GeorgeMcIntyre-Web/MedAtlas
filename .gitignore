@@ -6,3 +6,11 @@ dist
 .wrangler
 .env
 .DS_Store
+
+# Transpiled JavaScript files (keep source TypeScript)
+*.js
+*.js.map
+*.d.ts
+!*.config.js
+!scripts/*.js
+!scripts/*.mjs
