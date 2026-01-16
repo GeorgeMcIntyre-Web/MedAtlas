@@ -1,0 +1,16 @@
+{
+  "name": "@medatlas/reasoning",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@medatlas/schemas": "workspace:*",
+    "@medatlas/graph": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

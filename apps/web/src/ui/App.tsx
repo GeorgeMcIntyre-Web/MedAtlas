@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import type { MedAtlasOutput } from "@medatlas/schemas/types";
+import { TimelineView } from "./timeline";
+import { CrossModalView } from "./alignment";
 
 const apiBase = (import.meta as any).env?.VITE_API_BASE ?? "http://localhost:8787";
 
@@ -9,10 +11,16 @@ type LoadState =
   | { kind: "loaded"; data: MedAtlasOutput }
   | { kind: "error"; message: string };
 
+type DemoCaseResponse = {
+  interpretation?: MedAtlasOutput;
+};
+
 export const App = () => {
   const [state, setState] = useState<LoadState>({ kind: "idle" });
+  const [view, setView] = useState<"timeline" | "case" | "alignment">("timeline");
+  const [patientId, setPatientId] = useState("patient-001");
 
-  const title = useMemo(() => "MedAtlas — Demo", []);
+  const title = useMemo(() => "MedAtlas", []);
 
   useEffect(() => {
     const run = async () => {
@@ -21,13 +29,17 @@ export const App = () => {
       try {
         const res = await fetch(`${apiBase}/demo/case`);
 
-        if (res.ok === false) {
+        if (!res.ok) {
           setState({ kind: "error", message: `API error: ${res.status}` });
           return;
         }
 
-        const json = (await res.json()) as MedAtlasOutput;
-        setState({ kind: "loaded", data: json });
+        const json = (await res.json()) as DemoCaseResponse;
+        if (!json.interpretation) {
+          setState({ kind: "error", message: "Missing interpretation in demo response." });
+          return;
+        }
+        setState({ kind: "loaded", data: json.interpretation });
       } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         setState({ kind: "error", message });
@@ -38,26 +50,63 @@ export const App = () => {
   }, []);
 
   return (
-    <div style={{ fontFamily: "system-ui", padding: 24, maxWidth: 980, margin: "0 auto" }}>
-      <h1>{title}</h1>
-      <p style={{ opacity: 0.8 }}>
-        Cloudflare Worker API → schema-shaped output → UI wiring.
-      </p>
+    <div style={styles.shell}>
+      <style>{`
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+      <header style={styles.header}>
+        <div style={styles.brand}>
+          <div style={styles.logoMark}>MA</div>
+          <div>
+            <h1 style={styles.logo}>{title}</h1>
+            <p style={styles.tagline}>Clinical graph intelligence for rapid navigation.</p>
+          </div>
+        </div>
+        <nav style={styles.nav}>
+          <button onClick={() => setView("timeline")} style={view === "timeline" ? styles.activeTab : styles.tab}>
+            Timeline
+          </button>
+          <button onClick={() => setView("case")} style={view === "case" ? styles.activeTab : styles.tab}>
+            Case View
+          </button>
+          <button onClick={() => setView("alignment")} style={view === "alignment" ? styles.activeTab : styles.tab}>
+            Alignment
+          </button>
+        </nav>
+        <select value={patientId} onChange={(e) => setPatientId(e.target.value)} style={styles.select}>
+          <option value="patient-001">Demo Patient</option>
+        </select>
+      </header>
 
-      {state.kind === "loading" ? <p>Loading…</p> : null}
-
-      {state.kind === "error" ? (
-        <p style={{ color: "crimson" }}>Error: {state.message}</p>
-      ) : null}
-
-      {state.kind === "loaded" ? <CaseView data={state.data} /> : null}
+      <main style={styles.main}>
+        {view === "timeline" ? (
+          <TimelineView patientId={patientId} />
+        ) : null}
+        {view === "alignment" ? (
+          <CrossModalView patientId={patientId} />
+        ) : null}
+        {view === "case" ? (
+          <CaseViewWrapper state={state} />
+        ) : null}
+      </main>
     </div>
   );
 };
 
+const CaseViewWrapper = ({ state }: { state: LoadState }) => {
+  if (state.kind === "loading") return <p>Loading case view...</p>;
+  if (state.kind === "error") return <p style={{ color: "#b91c1c" }}>Error: {state.message}</p>;
+  if (state.kind !== "loaded") return null;
+  return <CaseView data={state.data} />;
+};
+
 const CaseView = ({ data }: { data: MedAtlasOutput }) => {
   return (
-    <div style={{ display: "grid", gap: 16 }}>
+    <div style={{ display: "grid", gap: 16, animation: "fadeUp 0.6s ease" }}>
       <Card title="Case">
         <Row k="caseId" v={data.caseId} />
         <Row k="modalities" v={data.modalities.join(", ")} />
@@ -69,10 +118,10 @@ const CaseView = ({ data }: { data: MedAtlasOutput }) => {
 
       <Card title="Findings">
         <ul>
-          {data.findings.map((f, i) => (
-            <li key={`${f.label}-${i}`}>
-              <b>{f.label}</b>
-              {f.probability === undefined ? null : <span> — p={f.probability}</span>}
+          {data.findings.map((finding, i) => (
+            <li key={`${finding.label}-${i}`}>
+              <b>{finding.label}</b>
+              {finding.probability === undefined ? null : <span> - p={finding.probability}</span>}
             </li>
           ))}
         </ul>
@@ -81,8 +130,8 @@ const CaseView = ({ data }: { data: MedAtlasOutput }) => {
       <Card title="Uncertainty">
         <Row k="level" v={data.uncertainty.level} />
         <ul>
-          {data.uncertainty.reasons.map((r, i) => (
-            <li key={`${r}-${i}`}>{r}</li>
+          {data.uncertainty.reasons.map((reason, i) => (
+            <li key={`${reason}-${i}`}>{reason}</li>
           ))}
         </ul>
       </Card>
@@ -92,16 +141,8 @@ const CaseView = ({ data }: { data: MedAtlasOutput }) => {
 
 const Card = ({ title, children }: { title: string; children: React.ReactNode }) => {
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        borderRadius: 16,
-        padding: 16,
-        background: "white",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.04)"
-      }}
-    >
-      <h2 style={{ marginTop: 0 }}>{title}</h2>
+    <div style={styles.card}>
+      <h2 style={styles.cardTitle}>{title}</h2>
       {children}
     </div>
   );
@@ -114,4 +155,73 @@ const Row = ({ k, v }: { k: string; v: string }) => {
       <div style={{ fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" }}>{v}</div>
     </div>
   );
+};
+
+const styles: Record<string, React.CSSProperties> = {
+  shell: {
+    fontFamily: "\"Space Grotesk\", sans-serif",
+    minHeight: "100vh",
+    background: "radial-gradient(circle at top, #e0f2fe 0%, #f8fafc 45%, #fef3c7 100%)",
+    color: "#0f172a"
+  },
+  header: {
+    display: "flex",
+    alignItems: "center",
+    padding: "16px 24px",
+    backgroundColor: "rgba(255, 255, 255, 0.9)",
+    borderBottom: "1px solid rgba(148, 163, 184, 0.3)",
+    gap: 24,
+    flexWrap: "wrap"
+  },
+  brand: { display: "flex", alignItems: "center", gap: 12 },
+  logoMark: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    backgroundColor: "#0f172a",
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontWeight: 700,
+    fontSize: 14,
+    letterSpacing: 1
+  },
+  logo: { margin: 0, fontSize: 20, fontWeight: 700 },
+  tagline: { margin: 0, fontSize: 12, color: "#64748b" },
+  nav: { display: "flex", gap: 8, marginLeft: 16, flexWrap: "wrap" },
+  tab: {
+    padding: "8px 16px",
+    background: "none",
+    border: "1px solid transparent",
+    cursor: "pointer",
+    borderRadius: 999,
+    color: "#64748b",
+    fontWeight: 600
+  },
+  activeTab: {
+    padding: "8px 16px",
+    backgroundColor: "#0f172a",
+    border: "1px solid #0f172a",
+    cursor: "pointer",
+    borderRadius: 999,
+    color: "white",
+    fontWeight: 600
+  },
+  select: {
+    marginLeft: "auto",
+    padding: "8px 12px",
+    borderRadius: 10,
+    border: "1px solid #e2e8f0",
+    backgroundColor: "white"
+  },
+  main: { padding: 24, animation: "fadeUp 0.6s ease" },
+  card: {
+    border: "1px solid #e2e8f0",
+    borderRadius: 16,
+    padding: 16,
+    background: "white",
+    boxShadow: "0 12px 32px rgba(15, 23, 42, 0.08)"
+  },
+  cardTitle: { marginTop: 0 }
 };

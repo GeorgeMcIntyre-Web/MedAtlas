@@ -1,4 +1,7 @@
-import type { MedAtlasOutput } from "@medatlas/schemas/types";
+import { handleGraphRequest } from "./graph/routes";
+import { handleReasoningRoutes } from "./reasoning/routes";
+import { handleDemoRoutes } from "./demo/routes";
+import { handleAlignmentRoutes } from "./alignment/routes";
 
 type Env = {
   APP_NAME: string;
@@ -18,48 +21,32 @@ const notFound = () => json({ error: "not_found" }, { status: 404 });
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    const { pathname } = url;
 
-    if (url.pathname !== "/health" && url.pathname !== "/demo/case") {
-      return notFound();
-    }
-
-    if (url.pathname === "/health") {
+    if (pathname === "/health") {
       return json({ status: "ok", app: env.APP_NAME });
     }
 
-    // Demo endpoint: returns a schema-shaped example for UX wiring.
-    const out: MedAtlasOutput = {
-      caseId: "demo-001",
-      modalities: ["synthetic", "note", "lab"],
-      summary: "Synthetic demo case for MedAtlas UI wiring.",
-      findings: [
-        {
-          label: "Example finding",
-          probability: 0.62,
-          evidence: [{ source: "synthetic", id: "synthetic-obs-001" }]
-        }
-      ],
-      extractedEntities: [
-        {
-          type: "symptom",
-          text: "headache",
-          evidence: [{ source: "note", id: "note-001" }]
-        }
-      ],
-      recommendations: [
-        "Request clinician review and confirm key data points.",
-        "Acquire imaging modality if clinically indicated."
-      ],
-      uncertainty: {
-        level: "high",
-        reasons: ["Synthetic data", "No imaging provided"]
-      },
-      safety: {
-        notMedicalAdvice: true,
-        requiresClinicianReview: true
-      }
-    };
+    if (pathname.startsWith("/graph")) {
+      const response = await handleGraphRequest(request);
+      if (response) return response;
+    }
 
-    return json(out);
+    if (pathname.startsWith("/reasoning")) {
+      const response = await handleReasoningRoutes(request, pathname);
+      if (response) return response;
+    }
+
+    if (pathname.startsWith("/demo")) {
+      const response = await handleDemoRoutes(request, pathname);
+      if (response) return response;
+    }
+
+    if (pathname.startsWith("/alignment") || pathname.startsWith("/evidence-chain")) {
+      const response = await handleAlignmentRoutes(request, pathname);
+      if (response) return response;
+    }
+
+    return notFound();
   }
 };

@@ -1,0 +1,22 @@
+{
+  "name": "@medatlas/graph",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts",
+    "./node-types": "./src/node-types.ts",
+    "./edge-types": "./src/edge-types.ts",
+    "./atlas-graph": "./src/atlas-graph.ts",
+    "./graph-query": "./src/graph-query.ts",
+    "./graph-storage": "./src/graph-storage.ts"
+  },
+  "dependencies": {
+    "@medatlas/schemas": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

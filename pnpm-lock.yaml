@@ -46,6 +46,55 @@ importers:
         specifier: ^5.4.2
         version: 5.4.21
 
+  packages/alignment:
+    dependencies:
+      '@medatlas/graph':
+        specifier: workspace:*
+        version: link:../graph
+      '@medatlas/schemas':
+        specifier: workspace:*
+        version: link:../schemas
+    devDependencies:
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
+  packages/graph:
+    dependencies:
+      '@medatlas/schemas':
+        specifier: workspace:*
+        version: link:../schemas
+    devDependencies:
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
+  packages/ingestion:
+    dependencies:
+      '@medatlas/graph':
+        specifier: workspace:*
+        version: link:../graph
+      '@medatlas/schemas':
+        specifier: workspace:*
+        version: link:../schemas
+    devDependencies:
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
+  packages/reasoning:
+    dependencies:
+      '@medatlas/graph':
+        specifier: workspace:*
+        version: link:../graph
+      '@medatlas/schemas':
+        specifier: workspace:*
+        version: link:../schemas
+    devDependencies:
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
   packages/schemas:
     devDependencies:
       typescript:
@@ -54,6 +103,18 @@ importers:
 
   workers/api:
     dependencies:
+      '@medatlas/alignment':
+        specifier: workspace:*
+        version: link:../../packages/alignment
+      '@medatlas/graph':
+        specifier: workspace:*
+        version: link:../../packages/graph
+      '@medatlas/ingestion':
+        specifier: workspace:*
+        version: link:../../packages/ingestion
+      '@medatlas/reasoning':
+        specifier: workspace:*
+        version: link:../../packages/reasoning
       '@medatlas/schemas':
         specifier: workspace:*
         version: link:../../packages/schemas
