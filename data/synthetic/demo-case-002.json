@@ -1,0 +1,466 @@
+{
+  "caseId": "demo-002",
+  "patient": {
+    "id": "patient-002",
+    "demographics": {
+      "age": 62,
+      "gender": "male",
+      "birthDate": "1962-07-22",
+      "mrn": "MRN-87654321"
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-010",
+      "type": "ED",
+      "timestamp": "2025-01-14T14:20:00Z",
+      "reason": "Chest pain",
+      "observations": [
+        {
+          "id": "obs-010",
+          "type": "chief_complaint",
+          "value": "Chest pain, substernal",
+          "text": "Patient presents with substernal chest pressure radiating to left arm for 2 hours",
+          "timestamp": "2025-01-14T14:25:00Z"
+        },
+        {
+          "id": "obs-011",
+          "type": "pain_character",
+          "value": "pressure",
+          "text": "Described as squeezing pressure, 8/10 intensity",
+          "timestamp": "2025-01-14T14:25:00Z"
+        },
+        {
+          "id": "obs-012",
+          "type": "associated_symptoms",
+          "value": "diaphoresis",
+          "text": "Associated with diaphoresis and shortness of breath",
+          "timestamp": "2025-01-14T14:25:00Z"
+        }
+      ],
+      "vitals": [
+        {
+          "id": "vital-010",
+          "name": "Blood Pressure",
+          "value": 165,
+          "unit": "mmHg",
+          "timestamp": "2025-01-14T14:22:00Z"
+        },
+        {
+          "id": "vital-011",
+          "name": "Heart Rate",
+          "value": 110,
+          "unit": "bpm",
+          "timestamp": "2025-01-14T14:22:00Z"
+        },
+        {
+          "id": "vital-012",
+          "name": "SpO2",
+          "value": 94,
+          "unit": "%",
+          "timestamp": "2025-01-14T14:22:00Z"
+        },
+        {
+          "id": "vital-013",
+          "name": "Respiratory Rate",
+          "value": 22,
+          "unit": "breaths/min",
+          "timestamp": "2025-01-14T14:22:00Z"
+        }
+      ],
+      "labs": [
+        {
+          "id": "lab-trop-1",
+          "name": "Troponin I",
+          "code": "10839-9",
+          "value": 0.85,
+          "unit": "ng/mL",
+          "referenceRange": { "low": 0, "high": 0.04 },
+          "interpretation": "critical-high",
+          "timestamp": "2025-01-14T14:45:00Z"
+        },
+        {
+          "id": "lab-bnp",
+          "name": "BNP",
+          "code": "42637-9",
+          "value": 450,
+          "unit": "pg/mL",
+          "referenceRange": { "low": 0, "high": 100 },
+          "interpretation": "high",
+          "timestamp": "2025-01-14T14:45:00Z"
+        },
+        {
+          "id": "lab-creat-2",
+          "name": "Creatinine",
+          "code": "2160-0",
+          "value": 1.4,
+          "unit": "mg/dL",
+          "referenceRange": { "low": 0.7, "high": 1.3 },
+          "interpretation": "high",
+          "timestamp": "2025-01-14T14:45:00Z"
+        },
+        {
+          "id": "lab-glucose",
+          "name": "Glucose",
+          "code": "2345-7",
+          "value": 185,
+          "unit": "mg/dL",
+          "referenceRange": { "low": 70, "high": 100 },
+          "interpretation": "high",
+          "timestamp": "2025-01-14T14:45:00Z"
+        },
+        {
+          "id": "lab-ldl",
+          "name": "LDL Cholesterol",
+          "code": "13457-7",
+          "value": 165,
+          "unit": "mg/dL",
+          "referenceRange": { "low": 0, "high": 100 },
+          "interpretation": "high",
+          "timestamp": "2025-01-14T14:45:00Z"
+        }
+      ],
+      "medications": [
+        {
+          "id": "med-010",
+          "name": "Aspirin",
+          "dosage": "325mg",
+          "route": "PO",
+          "frequency": "once",
+          "status": "completed",
+          "startDate": "2025-01-14T14:30:00Z"
+        },
+        {
+          "id": "med-011",
+          "name": "Nitroglycerin",
+          "dosage": "0.4mg",
+          "route": "SL",
+          "frequency": "q5min x3 PRN",
+          "status": "active",
+          "startDate": "2025-01-14T14:32:00Z"
+        },
+        {
+          "id": "med-012",
+          "name": "Heparin",
+          "dosage": "60 units/kg bolus",
+          "route": "IV",
+          "frequency": "once",
+          "status": "completed",
+          "startDate": "2025-01-14T15:00:00Z"
+        },
+        {
+          "id": "med-013",
+          "name": "Ticagrelor",
+          "dosage": "180mg",
+          "route": "PO",
+          "frequency": "loading dose",
+          "status": "completed",
+          "startDate": "2025-01-14T15:05:00Z"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "cond-010",
+          "code": "I21.0",
+          "icdCode": "I21.0",
+          "name": "STEMI - Anterior wall",
+          "status": "active",
+          "severity": "severe",
+          "onsetDate": "2025-01-14T12:00:00Z"
+        },
+        {
+          "id": "cond-011",
+          "code": "E11.9",
+          "icdCode": "E11.9",
+          "name": "Type 2 Diabetes Mellitus",
+          "status": "active",
+          "severity": "moderate"
+        },
+        {
+          "id": "cond-012",
+          "code": "I10",
+          "icdCode": "I10",
+          "name": "Essential Hypertension",
+          "status": "active",
+          "severity": "moderate"
+        }
+      ],
+      "studies": [
+        {
+          "id": "study-ecg-001",
+          "modality": "other",
+          "bodyPart": "Heart",
+          "description": "12-lead ECG",
+          "timestamp": "2025-01-14T14:28:00Z",
+          "findings": [
+            {
+              "id": "finding-ecg-001",
+              "description": "ST elevation in leads V1-V4 consistent with anterior STEMI",
+              "severity": "severe",
+              "confidence": 0.95,
+              "anatomy": "Anterior wall",
+              "crossModalRef": "lab-trop-1"
+            },
+            {
+              "id": "finding-ecg-002",
+              "description": "Reciprocal ST depression in inferior leads",
+              "severity": "moderate",
+              "confidence": 0.9,
+              "anatomy": "Inferior wall"
+            }
+          ]
+        },
+        {
+          "id": "study-xr-001",
+          "modality": "XR",
+          "bodyPart": "Chest",
+          "description": "Portable Chest X-Ray",
+          "accessionNumber": "ACC-2025-005678",
+          "timestamp": "2025-01-14T14:35:00Z",
+          "findings": [
+            {
+              "id": "finding-xr-001",
+              "description": "Mild pulmonary vascular congestion",
+              "severity": "mild",
+              "confidence": 0.85,
+              "anatomy": "Lungs",
+              "crossModalRef": "lab-bnp"
+            },
+            {
+              "id": "finding-xr-002",
+              "description": "No focal consolidation or pneumothorax",
+              "severity": "mild",
+              "confidence": 0.92,
+              "anatomy": "Lungs"
+            },
+            {
+              "id": "finding-xr-003",
+              "description": "Cardiac silhouette at upper limits of normal",
+              "severity": "mild",
+              "confidence": 0.88,
+              "anatomy": "Heart"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-010",
+          "type": "progress",
+          "author": "Dr. Williams, Emergency Medicine",
+          "text": "62-year-old male with PMH of DM2, HTN presents with acute onset substernal chest pain with radiation to left arm and associated diaphoresis. ECG shows ST elevation in V1-V4 consistent with anterior STEMI. Initial troponin markedly elevated. STEMI alert activated. Cardiology consulted for emergent cardiac catheterization. Patient loaded with aspirin and ticagrelor, heparin bolus given. Cath lab team notified, door-to-balloon target in progress.",
+          "timestamp": "2025-01-14T15:00:00Z"
+        }
+      ],
+      "procedures": [
+        {
+          "id": "proc-010",
+          "name": "12-lead ECG",
+          "code": "93000",
+          "status": "completed",
+          "outcome": "STEMI pattern identified",
+          "timestamp": "2025-01-14T14:28:00Z"
+        }
+      ]
+    },
+    {
+      "id": "enc-011",
+      "type": "inpatient",
+      "timestamp": "2025-01-14T15:30:00Z",
+      "reason": "Cardiac catheterization for STEMI",
+      "observations": [
+        {
+          "id": "obs-013",
+          "type": "angiographic_finding",
+          "value": "LAD occlusion",
+          "text": "Complete occlusion of proximal LAD with TIMI 0 flow",
+          "timestamp": "2025-01-14T16:00:00Z"
+        },
+        {
+          "id": "obs-014",
+          "type": "intervention_result",
+          "value": "successful",
+          "text": "Successful PCI with drug-eluting stent placement, TIMI 3 flow restored",
+          "timestamp": "2025-01-14T16:45:00Z"
+        }
+      ],
+      "vitals": [
+        {
+          "id": "vital-014",
+          "name": "Blood Pressure",
+          "value": 118,
+          "unit": "mmHg",
+          "timestamp": "2025-01-14T17:00:00Z"
+        },
+        {
+          "id": "vital-015",
+          "name": "Heart Rate",
+          "value": 72,
+          "unit": "bpm",
+          "timestamp": "2025-01-14T17:00:00Z"
+        }
+      ],
+      "labs": [
+        {
+          "id": "lab-trop-2",
+          "name": "Troponin I",
+          "code": "10839-9",
+          "value": 15.2,
+          "unit": "ng/mL",
+          "referenceRange": { "low": 0, "high": 0.04 },
+          "interpretation": "critical-high",
+          "timestamp": "2025-01-14T20:00:00Z"
+        },
+        {
+          "id": "lab-trop-3",
+          "name": "Troponin I",
+          "code": "10839-9",
+          "value": 8.5,
+          "unit": "ng/mL",
+          "referenceRange": { "low": 0, "high": 0.04 },
+          "interpretation": "critical-high",
+          "timestamp": "2025-01-15T08:00:00Z"
+        }
+      ],
+      "medications": [
+        {
+          "id": "med-014",
+          "name": "Aspirin",
+          "dosage": "81mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active",
+          "startDate": "2025-01-14T17:00:00Z"
+        },
+        {
+          "id": "med-015",
+          "name": "Ticagrelor",
+          "dosage": "90mg",
+          "route": "PO",
+          "frequency": "BID",
+          "status": "active",
+          "startDate": "2025-01-14T17:00:00Z"
+        },
+        {
+          "id": "med-016",
+          "name": "Metoprolol Succinate",
+          "dosage": "25mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active",
+          "startDate": "2025-01-15T08:00:00Z"
+        },
+        {
+          "id": "med-017",
+          "name": "Lisinopril",
+          "dosage": "5mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active",
+          "startDate": "2025-01-15T08:00:00Z"
+        },
+        {
+          "id": "med-018",
+          "name": "Atorvastatin",
+          "dosage": "80mg",
+          "route": "PO",
+          "frequency": "daily",
+          "status": "active",
+          "startDate": "2025-01-14T17:00:00Z"
+        }
+      ],
+      "conditions": [],
+      "studies": [
+        {
+          "id": "study-cath-001",
+          "modality": "other",
+          "bodyPart": "Heart",
+          "description": "Left heart catheterization with coronary angiography",
+          "accessionNumber": "CATH-2025-001234",
+          "timestamp": "2025-01-14T16:00:00Z",
+          "findings": [
+            {
+              "id": "finding-cath-001",
+              "description": "100% occlusion of proximal LAD",
+              "severity": "severe",
+              "confidence": 1.0,
+              "anatomy": "Left anterior descending artery",
+              "crossModalRef": "lab-trop-1"
+            },
+            {
+              "id": "finding-cath-002",
+              "description": "50% stenosis of mid-RCA",
+              "severity": "moderate",
+              "confidence": 0.95,
+              "anatomy": "Right coronary artery"
+            },
+            {
+              "id": "finding-cath-003",
+              "description": "Left main patent, LCx with mild disease",
+              "severity": "mild",
+              "confidence": 0.92,
+              "anatomy": "Left circumflex"
+            }
+          ]
+        },
+        {
+          "id": "study-echo-001",
+          "modality": "US",
+          "bodyPart": "Heart",
+          "description": "Transthoracic Echocardiogram",
+          "accessionNumber": "ECHO-2025-001234",
+          "timestamp": "2025-01-15T10:00:00Z",
+          "findings": [
+            {
+              "id": "finding-echo-001",
+              "description": "Ejection fraction 40%, reduced from presumed baseline",
+              "severity": "moderate",
+              "confidence": 0.9,
+              "anatomy": "Left ventricle"
+            },
+            {
+              "id": "finding-echo-002",
+              "description": "Anterior and apical wall motion abnormality",
+              "severity": "moderate",
+              "confidence": 0.92,
+              "anatomy": "Left ventricle"
+            },
+            {
+              "id": "finding-echo-003",
+              "description": "No significant valvular disease",
+              "severity": "mild",
+              "confidence": 0.95,
+              "anatomy": "Cardiac valves"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-011",
+          "type": "procedure",
+          "author": "Dr. Chen, Interventional Cardiology",
+          "text": "Patient underwent emergent cardiac catheterization for anterior STEMI. Angiography revealed complete occlusion of proximal LAD. Successful primary PCI performed with placement of 3.5x24mm drug-eluting stent. TIMI 3 flow restored. Door-to-balloon time 65 minutes. Patient tolerated procedure well. Transferred to CCU for monitoring. Continue DAPT, beta-blocker, ACE inhibitor, and high-intensity statin.",
+          "timestamp": "2025-01-14T17:00:00Z"
+        },
+        {
+          "id": "note-012",
+          "type": "progress",
+          "author": "Dr. Chen, Interventional Cardiology",
+          "text": "Post-PCI day 1. Patient hemodynamically stable. Chest pain resolved. Troponins trending down. Echo shows EF 40% with anterior WMA consistent with infarct. Will continue medical optimization. Cardiac rehab referral placed. Risk factor modification discussed including diabetes and hypertension control.",
+          "timestamp": "2025-01-15T12:00:00Z"
+        }
+      ],
+      "procedures": [
+        {
+          "id": "proc-011",
+          "name": "Percutaneous coronary intervention with stent placement",
+          "code": "92928",
+          "status": "completed",
+          "outcome": "Successful revascularization, TIMI 3 flow",
+          "timestamp": "2025-01-14T16:45:00Z"
+        }
+      ]
+    }
+  ]
+}

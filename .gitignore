@@ -6,3 +6,10 @@ dist
 .wrangler
 .env
 .DS_Store
+
+# Generated JS files from TypeScript (we track .ts source files only)
+*.js
+*.js.map
+*.d.ts
+!*.config.js
+!scripts/*.mjs

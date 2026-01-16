@@ -1,0 +1,2279 @@
+{
+  "caseId": "demo-001",
+  "generatedAt": "2026-01-16T07:03:24.384Z",
+  "graph": {
+    "nodes": [
+      {
+        "id": "patient-demo-001-patient-001",
+        "type": "patient",
+        "label": "Patient patient-001",
+        "properties": {
+          "patientId": "patient-001",
+          "age": 45,
+          "gender": "female",
+          "birthDate": "1979-03-15",
+          "mrn": "MRN-12345678"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "patient-001"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.383Z"
+      },
+      {
+        "id": "encounter-demo-001-enc-001",
+        "type": "encounter",
+        "label": "ED Visit",
+        "properties": {
+          "encounterId": "enc-001",
+          "type": "ED",
+          "reason": "Abdominal pain",
+          "status": "finished"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-001",
+            "capturedAt": "2025-01-15T08:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "observation-demo-001-obs-001",
+        "type": "observation",
+        "label": "chief_complaint",
+        "properties": {
+          "observationId": "obs-001",
+          "observationType": "chief_complaint",
+          "value": "Abdominal pain, RLQ",
+          "text": "Patient presents with right lower quadrant abdominal pain for 2 days, worsening"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-001",
+            "capturedAt": "2025-01-15T08:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "observation-demo-001-obs-002",
+        "type": "observation",
+        "label": "pain_score",
+        "properties": {
+          "observationId": "obs-002",
+          "observationType": "pain_score",
+          "value": 7,
+          "text": "Pain score 7/10"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-002",
+            "capturedAt": "2025-01-15T08:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "observation-demo-001-obs-003",
+        "type": "observation",
+        "label": "symptom",
+        "properties": {
+          "observationId": "obs-003",
+          "observationType": "symptom",
+          "value": "nausea",
+          "text": "Associated nausea, no vomiting"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-003",
+            "capturedAt": "2025-01-15T08:35:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:35:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-001",
+        "type": "vital",
+        "label": "Temperature",
+        "properties": {
+          "vitalId": "vital-001",
+          "name": "Temperature",
+          "value": 38.2,
+          "unit": "°C"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-001",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:32:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-002",
+        "type": "vital",
+        "label": "Heart Rate",
+        "properties": {
+          "vitalId": "vital-002",
+          "name": "Heart Rate",
+          "value": 92,
+          "unit": "bpm"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-002",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:32:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-003",
+        "type": "vital",
+        "label": "Blood Pressure",
+        "properties": {
+          "vitalId": "vital-003",
+          "name": "Blood Pressure",
+          "value": 128,
+          "unit": "mmHg"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-003",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:32:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-004",
+        "type": "vital",
+        "label": "Respiratory Rate",
+        "properties": {
+          "vitalId": "vital-004",
+          "name": "Respiratory Rate",
+          "value": 18,
+          "unit": "breaths/min"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-004",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:32:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-005",
+        "type": "vital",
+        "label": "SpO2",
+        "properties": {
+          "vitalId": "vital-005",
+          "name": "SpO2",
+          "value": 98,
+          "unit": "%"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-005",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:32:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-wbc",
+        "type": "lab",
+        "label": "White Blood Cell Count",
+        "properties": {
+          "labId": "lab-wbc",
+          "name": "White Blood Cell Count",
+          "code": "6690-2",
+          "value": 14.2,
+          "unit": "10^9/L",
+          "referenceRange": {
+            "low": 4.5,
+            "high": 11
+          },
+          "interpretation": "high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-wbc",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-crp",
+        "type": "lab",
+        "label": "C-Reactive Protein",
+        "properties": {
+          "labId": "lab-crp",
+          "name": "C-Reactive Protein",
+          "code": "1988-5",
+          "value": 85,
+          "unit": "mg/L",
+          "referenceRange": {
+            "low": 0,
+            "high": 10
+          },
+          "interpretation": "critical-high"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-crp",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-hgb",
+        "type": "lab",
+        "label": "Hemoglobin",
+        "properties": {
+          "labId": "lab-hgb",
+          "name": "Hemoglobin",
+          "code": "718-7",
+          "value": 13.5,
+          "unit": "g/dL",
+          "referenceRange": {
+            "low": 12,
+            "high": 16
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-hgb",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-plt",
+        "type": "lab",
+        "label": "Platelet Count",
+        "properties": {
+          "labId": "lab-plt",
+          "name": "Platelet Count",
+          "code": "777-3",
+          "value": 285,
+          "unit": "10^9/L",
+          "referenceRange": {
+            "low": 150,
+            "high": 400
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-plt",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-creat",
+        "type": "lab",
+        "label": "Creatinine",
+        "properties": {
+          "labId": "lab-creat",
+          "name": "Creatinine",
+          "code": "2160-0",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "referenceRange": {
+            "low": 0.6,
+            "high": 1.2
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-creat",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-lipase",
+        "type": "lab",
+        "label": "Lipase",
+        "properties": {
+          "labId": "lab-lipase",
+          "name": "Lipase",
+          "code": "3040-3",
+          "value": 45,
+          "unit": "U/L",
+          "referenceRange": {
+            "low": 0,
+            "high": 60
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-lipase",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "medication-demo-001-med-001",
+        "type": "medication",
+        "label": "Morphine Sulfate",
+        "properties": {
+          "medicationId": "med-001",
+          "name": "Morphine Sulfate",
+          "dosage": "4mg",
+          "route": "IV",
+          "frequency": "PRN",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-001",
+            "capturedAt": "2025-01-15T08:45:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:45:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "medication-demo-001-med-002",
+        "type": "medication",
+        "label": "Ondansetron",
+        "properties": {
+          "medicationId": "med-002",
+          "name": "Ondansetron",
+          "dosage": "4mg",
+          "route": "IV",
+          "frequency": "once",
+          "status": "completed"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-002",
+            "capturedAt": "2025-01-15T08:50:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T08:50:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "condition-demo-001-cond-001",
+        "type": "condition",
+        "label": "Acute appendicitis",
+        "properties": {
+          "conditionId": "cond-001",
+          "name": "Acute appendicitis",
+          "code": "K35.80",
+          "icdCode": "K35.80",
+          "status": "active",
+          "severity": "moderate"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-001",
+            "capturedAt": "2025-01-13T00:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-13T00:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "study-demo-001-study-ct-001",
+        "type": "study",
+        "label": "CT Abdomen/Pelvis",
+        "properties": {
+          "studyId": "study-ct-001",
+          "modality": "CT",
+          "bodyPart": "Abdomen/Pelvis",
+          "description": "CT Abdomen and Pelvis with contrast",
+          "accessionNumber": "ACC-2025-001234"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "finding-demo-001-finding-001",
+        "type": "finding",
+        "label": "Enlarged appendix measuring 12mm in diameter with periappendiceal fat stranding",
+        "properties": {
+          "findingId": "finding-001",
+          "description": "Enlarged appendix measuring 12mm in diameter with periappendiceal fat stranding",
+          "severity": "moderate",
+          "confidence": 0.92,
+          "anatomy": "Appendix",
+          "imageRef": "study-ct-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "finding-demo-001-finding-002",
+        "type": "finding",
+        "label": "No free fluid or abscess identified",
+        "properties": {
+          "findingId": "finding-002",
+          "description": "No free fluid or abscess identified",
+          "severity": "mild",
+          "confidence": 0.95,
+          "anatomy": "Peritoneal cavity",
+          "imageRef": "study-ct-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "finding-demo-001-finding-003",
+        "type": "finding",
+        "label": "Appendicolith at the base of appendix",
+        "properties": {
+          "findingId": "finding-003",
+          "description": "Appendicolith at the base of appendix",
+          "severity": "moderate",
+          "confidence": 0.88,
+          "anatomy": "Appendix",
+          "imageRef": "study-ct-001"
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "note-demo-001-note-001",
+        "type": "note",
+        "label": "progress Note",
+        "properties": {
+          "noteId": "note-001",
+          "type": "progress",
+          "author": "Dr. Smith, ED Attending",
+          "text": "45-year-old female presenting with 2-day history of progressive right lower quadrant abdominal pain. Pain started periumbilically and migrated to RLQ. Associated with nausea, anorexia, and low-grade fever. No vomiting or diarrhea. Physical exam reveals RLQ tenderness with rebound and guarding. Rovsing sign positive. Labs show leukocytosis and elevated CRP. CT scan confirms acute appendicitis with periappendiceal inflammation. Surgical consult placed.",
+          "excerpt": "45-year-old female presenting with 2-day history of progressive right lower quadrant abdominal pain. Pain started periumbilically and migrated to RLQ. Associated with nausea, anorexia, and low-grade f..."
+        },
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-001",
+            "capturedAt": "2025-01-15T10:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "procedure-demo-001-proc-001",
+        "type": "procedure",
+        "label": "CT-guided imaging",
+        "properties": {
+          "procedureId": "proc-001",
+          "name": "CT-guided imaging",
+          "code": "74177",
+          "status": "completed",
+          "outcome": "Diagnostic images obtained"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T10:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "encounter-demo-001-enc-002",
+        "type": "encounter",
+        "label": "inpatient Visit",
+        "properties": {
+          "encounterId": "enc-002",
+          "type": "inpatient",
+          "reason": "Surgical admission for appendectomy",
+          "status": "finished"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-002",
+            "capturedAt": "2025-01-15T12:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T12:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "observation-demo-001-obs-004",
+        "type": "observation",
+        "label": "surgical_consent",
+        "properties": {
+          "observationId": "obs-004",
+          "observationType": "surgical_consent",
+          "value": "obtained",
+          "text": "Surgical consent obtained for laparoscopic appendectomy"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-004",
+            "capturedAt": "2025-01-15T13:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T13:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-006",
+        "type": "vital",
+        "label": "Temperature",
+        "properties": {
+          "vitalId": "vital-006",
+          "name": "Temperature",
+          "value": 37.8,
+          "unit": "°C"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-006",
+            "capturedAt": "2025-01-15T14:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T14:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-007",
+        "type": "vital",
+        "label": "Heart Rate",
+        "properties": {
+          "vitalId": "vital-007",
+          "name": "Heart Rate",
+          "value": 78,
+          "unit": "bpm"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-007",
+            "capturedAt": "2025-01-15T14:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T14:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-ptt",
+        "type": "lab",
+        "label": "Partial Thromboplastin Time",
+        "properties": {
+          "labId": "lab-ptt",
+          "name": "Partial Thromboplastin Time",
+          "code": "3173-2",
+          "value": 28,
+          "unit": "seconds",
+          "referenceRange": {
+            "low": 25,
+            "high": 35
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-ptt",
+            "capturedAt": "2025-01-15T12:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T12:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-inr",
+        "type": "lab",
+        "label": "INR",
+        "properties": {
+          "labId": "lab-inr",
+          "name": "INR",
+          "code": "34714-6",
+          "value": 1,
+          "unit": "",
+          "referenceRange": {
+            "low": 0.8,
+            "high": 1.2
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-inr",
+            "capturedAt": "2025-01-15T12:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T12:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "medication-demo-001-med-003",
+        "type": "medication",
+        "label": "Cefazolin",
+        "properties": {
+          "medicationId": "med-003",
+          "name": "Cefazolin",
+          "dosage": "2g",
+          "route": "IV",
+          "frequency": "pre-op",
+          "status": "completed"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-003",
+            "capturedAt": "2025-01-15T14:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T14:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "medication-demo-001-med-004",
+        "type": "medication",
+        "label": "Metronidazole",
+        "properties": {
+          "medicationId": "med-004",
+          "name": "Metronidazole",
+          "dosage": "500mg",
+          "route": "IV",
+          "frequency": "pre-op",
+          "status": "completed"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-004",
+            "capturedAt": "2025-01-15T14:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T14:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "note-demo-001-note-002",
+        "type": "note",
+        "label": "admission Note",
+        "properties": {
+          "noteId": "note-002",
+          "type": "admission",
+          "author": "Dr. Johnson, Surgery",
+          "text": "Admitting patient for laparoscopic appendectomy. Patient is a 45-year-old female with acute appendicitis confirmed on CT imaging. Pre-operative labs within normal limits. Patient consented for surgery. NPO since midnight. IV antibiotics initiated.",
+          "excerpt": "Admitting patient for laparoscopic appendectomy. Patient is a 45-year-old female with acute appendicitis confirmed on CT imaging. Pre-operative labs within normal limits. Patient consented for surgery..."
+        },
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-002",
+            "capturedAt": "2025-01-15T13:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T13:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "procedure-demo-001-proc-002",
+        "type": "procedure",
+        "label": "Laparoscopic appendectomy",
+        "properties": {
+          "procedureId": "proc-002",
+          "name": "Laparoscopic appendectomy",
+          "code": "44970",
+          "status": "completed",
+          "outcome": "Successful removal of inflamed appendix, no complications"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-002",
+            "capturedAt": "2025-01-15T15:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-15T15:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "encounter-demo-001-enc-003",
+        "type": "encounter",
+        "label": "outpatient Visit",
+        "properties": {
+          "encounterId": "enc-003",
+          "type": "outpatient",
+          "reason": "Post-operative follow-up",
+          "status": "finished"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-003",
+            "capturedAt": "2025-01-22T09:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "observation-demo-001-obs-005",
+        "type": "observation",
+        "label": "wound_assessment",
+        "properties": {
+          "observationId": "obs-005",
+          "observationType": "wound_assessment",
+          "value": "healing well",
+          "text": "Incision sites clean, dry, and healing well. No signs of infection."
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-005",
+            "capturedAt": "2025-01-22T09:15:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:15:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "observation-demo-001-obs-006",
+        "type": "observation",
+        "label": "pain_score",
+        "properties": {
+          "observationId": "obs-006",
+          "observationType": "pain_score",
+          "value": 2,
+          "text": "Minimal incisional pain, well controlled with acetaminophen"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-006",
+            "capturedAt": "2025-01-22T09:15:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:15:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "vital-demo-001-vital-008",
+        "type": "vital",
+        "label": "Temperature",
+        "properties": {
+          "vitalId": "vital-008",
+          "name": "Temperature",
+          "value": 36.8,
+          "unit": "°C"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-008",
+            "capturedAt": "2025-01-22T09:05:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:05:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-wbc-fu",
+        "type": "lab",
+        "label": "White Blood Cell Count",
+        "properties": {
+          "labId": "lab-wbc-fu",
+          "name": "White Blood Cell Count",
+          "code": "6690-2",
+          "value": 7.2,
+          "unit": "10^9/L",
+          "referenceRange": {
+            "low": 4.5,
+            "high": 11
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-wbc-fu",
+            "capturedAt": "2025-01-22T09:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "lab-demo-001-lab-crp-fu",
+        "type": "lab",
+        "label": "C-Reactive Protein",
+        "properties": {
+          "labId": "lab-crp-fu",
+          "name": "C-Reactive Protein",
+          "code": "1988-5",
+          "value": 8,
+          "unit": "mg/L",
+          "referenceRange": {
+            "low": 0,
+            "high": 10
+          },
+          "interpretation": "normal"
+        },
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-crp-fu",
+            "capturedAt": "2025-01-22T09:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "medication-demo-001-med-005",
+        "type": "medication",
+        "label": "Acetaminophen",
+        "properties": {
+          "medicationId": "med-005",
+          "name": "Acetaminophen",
+          "dosage": "650mg",
+          "route": "PO",
+          "frequency": "q6h PRN",
+          "status": "active"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-005",
+            "capturedAt": "2025-01-16T00:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-16T00:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "condition-demo-001-cond-002",
+        "type": "condition",
+        "label": "Acute appendicitis",
+        "properties": {
+          "conditionId": "cond-002",
+          "name": "Acute appendicitis",
+          "code": "K35.80",
+          "icdCode": "K35.80",
+          "status": "resolved",
+          "severity": "moderate"
+        },
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-002",
+            "capturedAt": "2025-01-13T00:00:00Z"
+          }
+        ],
+        "timestamp": "2025-01-13T00:00:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "note-demo-001-note-003",
+        "type": "note",
+        "label": "progress Note",
+        "properties": {
+          "noteId": "note-003",
+          "type": "progress",
+          "author": "Dr. Johnson, Surgery",
+          "text": "Post-operative day 7 follow-up. Patient recovering well from laparoscopic appendectomy. Incisions healing nicely. Pain well controlled. Inflammatory markers normalized. Pathology confirmed acute appendicitis without perforation. Resume normal activities as tolerated. Return if fever, increasing pain, or wound concerns.",
+          "excerpt": "Post-operative day 7 follow-up. Patient recovering well from laparoscopic appendectomy. Incisions healing nicely. Pain well controlled. Inflammatory markers normalized. Pathology confirmed acute appen..."
+        },
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-003",
+            "capturedAt": "2025-01-22T09:30:00Z"
+          }
+        ],
+        "timestamp": "2025-01-22T09:30:00Z",
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-encounter-demo-001-enc-001-patient-demo-001-patient-001-observed-in",
+        "source": "encounter-demo-001-enc-001",
+        "target": "patient-demo-001-patient-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-001"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-observation-demo-001-obs-001-encounter-demo-001-enc-001-observed-in",
+        "source": "observation-demo-001-obs-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-observation-demo-001-obs-002-encounter-demo-001-enc-001-observed-in",
+        "source": "observation-demo-001-obs-002",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-observation-demo-001-obs-003-encounter-demo-001-enc-001-observed-in",
+        "source": "observation-demo-001-obs-003",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-001-encounter-demo-001-enc-001-observed-in",
+        "source": "vital-demo-001-vital-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-002-encounter-demo-001-enc-001-observed-in",
+        "source": "vital-demo-001-vital-002",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-003-encounter-demo-001-enc-001-observed-in",
+        "source": "vital-demo-001-vital-003",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-004-encounter-demo-001-enc-001-observed-in",
+        "source": "vital-demo-001-vital-004",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-005-encounter-demo-001-enc-001-observed-in",
+        "source": "vital-demo-001-vital-005",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-wbc-encounter-demo-001-enc-001-observed-in",
+        "source": "lab-demo-001-lab-wbc",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-crp-encounter-demo-001-enc-001-observed-in",
+        "source": "lab-demo-001-lab-crp",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-hgb-encounter-demo-001-enc-001-observed-in",
+        "source": "lab-demo-001-lab-hgb",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-plt-encounter-demo-001-enc-001-observed-in",
+        "source": "lab-demo-001-lab-plt",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-creat-encounter-demo-001-enc-001-observed-in",
+        "source": "lab-demo-001-lab-creat",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-lipase-encounter-demo-001-enc-001-observed-in",
+        "source": "lab-demo-001-lab-lipase",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-001-encounter-demo-001-enc-001-observed-in",
+        "source": "medication-demo-001-med-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-002-encounter-demo-001-enc-001-observed-in",
+        "source": "medication-demo-001-med-002",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-condition-demo-001-cond-001-encounter-demo-001-enc-001-observed-in",
+        "source": "condition-demo-001-cond-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-study-demo-001-study-ct-001-encounter-demo-001-enc-001-observed-in",
+        "source": "study-demo-001-study-ct-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-finding-demo-001-finding-001-study-demo-001-study-ct-001-derived-from",
+        "source": "finding-demo-001-finding-001",
+        "target": "study-demo-001-study-ct-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-finding-demo-001-finding-001-lab-demo-001-lab-crp-matches",
+        "source": "finding-demo-001-finding-001",
+        "target": "lab-demo-001-lab-crp",
+        "type": "matches",
+        "label": "matches",
+        "properties": {
+          "confidence": 0.92
+        },
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001"
+          },
+          {
+            "source": "lab",
+            "id": "lab-crp"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-finding-demo-001-finding-002-study-demo-001-study-ct-001-derived-from",
+        "source": "finding-demo-001-finding-002",
+        "target": "study-demo-001-study-ct-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-finding-demo-001-finding-003-study-demo-001-study-ct-001-derived-from",
+        "source": "finding-demo-001-finding-003",
+        "target": "study-demo-001-study-ct-001",
+        "type": "derived-from",
+        "label": "derived from",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-note-demo-001-note-001-encounter-demo-001-enc-001-observed-in",
+        "source": "note-demo-001-note-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-procedure-demo-001-proc-001-encounter-demo-001-enc-001-observed-in",
+        "source": "procedure-demo-001-proc-001",
+        "target": "encounter-demo-001-enc-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-001-condition-demo-001-cond-001-treats",
+        "source": "medication-demo-001-med-001",
+        "target": "condition-demo-001-cond-001",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-002-condition-demo-001-cond-001-treats",
+        "source": "medication-demo-001-med-002",
+        "target": "condition-demo-001-cond-001",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-encounter-demo-001-enc-002-patient-demo-001-patient-001-observed-in",
+        "source": "encounter-demo-001-enc-002",
+        "target": "patient-demo-001-patient-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-002"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-observation-demo-001-obs-004-encounter-demo-001-enc-002-observed-in",
+        "source": "observation-demo-001-obs-004",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-006-encounter-demo-001-enc-002-observed-in",
+        "source": "vital-demo-001-vital-006",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-007-encounter-demo-001-enc-002-observed-in",
+        "source": "vital-demo-001-vital-007",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-ptt-encounter-demo-001-enc-002-observed-in",
+        "source": "lab-demo-001-lab-ptt",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-inr-encounter-demo-001-enc-002-observed-in",
+        "source": "lab-demo-001-lab-inr",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-003-encounter-demo-001-enc-002-observed-in",
+        "source": "medication-demo-001-med-003",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-004-encounter-demo-001-enc-002-observed-in",
+        "source": "medication-demo-001-med-004",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-note-demo-001-note-002-encounter-demo-001-enc-002-observed-in",
+        "source": "note-demo-001-note-002",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-procedure-demo-001-proc-002-encounter-demo-001-enc-002-observed-in",
+        "source": "procedure-demo-001-proc-002",
+        "target": "encounter-demo-001-enc-002",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-encounter-demo-001-enc-003-patient-demo-001-patient-001-observed-in",
+        "source": "encounter-demo-001-enc-003",
+        "target": "patient-demo-001-patient-001",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-003"
+          }
+        ],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-observation-demo-001-obs-005-encounter-demo-001-enc-003-observed-in",
+        "source": "observation-demo-001-obs-005",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-observation-demo-001-obs-006-encounter-demo-001-enc-003-observed-in",
+        "source": "observation-demo-001-obs-006",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-vital-demo-001-vital-008-encounter-demo-001-enc-003-observed-in",
+        "source": "vital-demo-001-vital-008",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-wbc-fu-encounter-demo-001-enc-003-observed-in",
+        "source": "lab-demo-001-lab-wbc-fu",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-lab-demo-001-lab-crp-fu-encounter-demo-001-enc-003-observed-in",
+        "source": "lab-demo-001-lab-crp-fu",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-005-encounter-demo-001-enc-003-observed-in",
+        "source": "medication-demo-001-med-005",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-condition-demo-001-cond-002-encounter-demo-001-enc-003-observed-in",
+        "source": "condition-demo-001-cond-002",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-note-demo-001-note-003-encounter-demo-001-enc-003-observed-in",
+        "source": "note-demo-001-note-003",
+        "target": "encounter-demo-001-enc-003",
+        "type": "observed-in",
+        "label": "observed in",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-medication-demo-001-med-005-condition-demo-001-cond-002-treats",
+        "source": "medication-demo-001-med-005",
+        "target": "condition-demo-001-cond-002",
+        "type": "treats",
+        "label": "treats",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-encounter-demo-001-enc-001-encounter-demo-001-enc-002-precedes",
+        "source": "encounter-demo-001-enc-001",
+        "target": "encounter-demo-001-enc-002",
+        "type": "precedes",
+        "label": "precedes",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      },
+      {
+        "id": "edge-encounter-demo-001-enc-002-encounter-demo-001-enc-003-precedes",
+        "source": "encounter-demo-001-enc-002",
+        "target": "encounter-demo-001-enc-003",
+        "type": "precedes",
+        "label": "precedes",
+        "properties": {},
+        "evidence": [],
+        "createdAt": "2026-01-16T07:03:24.384Z"
+      }
+    ]
+  },
+  "timeline": {
+    "patientId": "patient-001",
+    "events": [
+      {
+        "id": "condition-demo-001-cond-001",
+        "type": "condition",
+        "timestamp": "2025-01-13T00:00:00Z",
+        "title": "Acute appendicitis",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-001",
+            "capturedAt": "2025-01-13T00:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001",
+          "medication-demo-001-med-001",
+          "medication-demo-001-med-002"
+        ]
+      },
+      {
+        "id": "condition-demo-001-cond-002",
+        "type": "condition",
+        "timestamp": "2025-01-13T00:00:00Z",
+        "title": "Acute appendicitis",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "cond-002",
+            "capturedAt": "2025-01-13T00:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003",
+          "medication-demo-001-med-005"
+        ]
+      },
+      {
+        "id": "encounter-demo-001-enc-001",
+        "type": "encounter",
+        "timestamp": "2025-01-15T08:30:00Z",
+        "title": "ED Visit",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-001",
+            "capturedAt": "2025-01-15T08:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "patient-demo-001-patient-001",
+          "observation-demo-001-obs-001",
+          "observation-demo-001-obs-002",
+          "observation-demo-001-obs-003",
+          "vital-demo-001-vital-001",
+          "vital-demo-001-vital-002",
+          "vital-demo-001-vital-003",
+          "vital-demo-001-vital-004",
+          "vital-demo-001-vital-005",
+          "lab-demo-001-lab-wbc",
+          "lab-demo-001-lab-crp",
+          "lab-demo-001-lab-hgb",
+          "lab-demo-001-lab-plt",
+          "lab-demo-001-lab-creat",
+          "lab-demo-001-lab-lipase",
+          "medication-demo-001-med-001",
+          "medication-demo-001-med-002",
+          "condition-demo-001-cond-001",
+          "study-demo-001-study-ct-001",
+          "note-demo-001-note-001",
+          "procedure-demo-001-proc-001",
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-001",
+        "type": "vital",
+        "timestamp": "2025-01-15T08:32:00Z",
+        "title": "Temperature",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-001",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-002",
+        "type": "vital",
+        "timestamp": "2025-01-15T08:32:00Z",
+        "title": "Heart Rate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-002",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-003",
+        "type": "vital",
+        "timestamp": "2025-01-15T08:32:00Z",
+        "title": "Blood Pressure",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-003",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-004",
+        "type": "vital",
+        "timestamp": "2025-01-15T08:32:00Z",
+        "title": "Respiratory Rate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-004",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-005",
+        "type": "vital",
+        "timestamp": "2025-01-15T08:32:00Z",
+        "title": "SpO2",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-005",
+            "capturedAt": "2025-01-15T08:32:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "observation-demo-001-obs-001",
+        "type": "observation",
+        "timestamp": "2025-01-15T08:35:00Z",
+        "title": "chief_complaint",
+        "summary": "Patient presents with right lower quadrant abdominal pain for 2 days, worsening",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-001",
+            "capturedAt": "2025-01-15T08:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "observation-demo-001-obs-002",
+        "type": "observation",
+        "timestamp": "2025-01-15T08:35:00Z",
+        "title": "pain_score",
+        "summary": "Pain score 7/10",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-002",
+            "capturedAt": "2025-01-15T08:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "observation-demo-001-obs-003",
+        "type": "observation",
+        "timestamp": "2025-01-15T08:35:00Z",
+        "title": "symptom",
+        "summary": "Associated nausea, no vomiting",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-003",
+            "capturedAt": "2025-01-15T08:35:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "medication-demo-001-med-001",
+        "type": "medication",
+        "timestamp": "2025-01-15T08:45:00Z",
+        "title": "Morphine Sulfate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-001",
+            "capturedAt": "2025-01-15T08:45:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001",
+          "condition-demo-001-cond-001"
+        ]
+      },
+      {
+        "id": "medication-demo-001-med-002",
+        "type": "medication",
+        "timestamp": "2025-01-15T08:50:00Z",
+        "title": "Ondansetron",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-002",
+            "capturedAt": "2025-01-15T08:50:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001",
+          "condition-demo-001-cond-001"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-wbc",
+        "type": "lab",
+        "timestamp": "2025-01-15T09:00:00Z",
+        "title": "White Blood Cell Count",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-wbc",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-crp",
+        "type": "lab",
+        "timestamp": "2025-01-15T09:00:00Z",
+        "title": "C-Reactive Protein",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-crp",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001",
+          "finding-demo-001-finding-001"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-hgb",
+        "type": "lab",
+        "timestamp": "2025-01-15T09:00:00Z",
+        "title": "Hemoglobin",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-hgb",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-plt",
+        "type": "lab",
+        "timestamp": "2025-01-15T09:00:00Z",
+        "title": "Platelet Count",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-plt",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-creat",
+        "type": "lab",
+        "timestamp": "2025-01-15T09:00:00Z",
+        "title": "Creatinine",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-creat",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-lipase",
+        "type": "lab",
+        "timestamp": "2025-01-15T09:00:00Z",
+        "title": "Lipase",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-lipase",
+            "capturedAt": "2025-01-15T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "study-demo-001-study-ct-001",
+        "type": "study",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "CT Abdomen/Pelvis",
+        "summary": "CT Abdomen and Pelvis with contrast",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001",
+          "finding-demo-001-finding-001",
+          "finding-demo-001-finding-002",
+          "finding-demo-001-finding-003"
+        ]
+      },
+      {
+        "id": "finding-demo-001-finding-001",
+        "type": "finding",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "Enlarged appendix measuring 12mm in diameter with periappendiceal fat stranding",
+        "summary": "Enlarged appendix measuring 12mm in diameter with periappendiceal fat stranding",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-001-study-ct-001",
+          "lab-demo-001-lab-crp"
+        ]
+      },
+      {
+        "id": "finding-demo-001-finding-002",
+        "type": "finding",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "No free fluid or abscess identified",
+        "summary": "No free fluid or abscess identified",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-001-study-ct-001"
+        ]
+      },
+      {
+        "id": "finding-demo-001-finding-003",
+        "type": "finding",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "Appendicolith at the base of appendix",
+        "summary": "Appendicolith at the base of appendix",
+        "evidence": [
+          {
+            "source": "dicom",
+            "id": "study-ct-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "study-demo-001-study-ct-001"
+        ]
+      },
+      {
+        "id": "procedure-demo-001-proc-001",
+        "type": "procedure",
+        "timestamp": "2025-01-15T10:00:00Z",
+        "title": "CT-guided imaging",
+        "summary": "Diagnostic images obtained",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-001",
+            "capturedAt": "2025-01-15T10:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "note-demo-001-note-001",
+        "type": "note",
+        "timestamp": "2025-01-15T10:30:00Z",
+        "title": "progress Note",
+        "summary": "45-year-old female presenting with 2-day history of progressive right lower quadrant abdominal pain. Pain started periumbilically and migrated to RLQ. Associated with nausea, anorexia, and low-grade fever. No vomiting or diarrhea. Physical exam reveals RLQ tenderness with rebound and guarding. Rovsing sign positive. Labs show leukocytosis and elevated CRP. CT scan confirms acute appendicitis with periappendiceal inflammation. Surgical consult placed.",
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-001",
+            "capturedAt": "2025-01-15T10:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-001"
+        ]
+      },
+      {
+        "id": "encounter-demo-001-enc-002",
+        "type": "encounter",
+        "timestamp": "2025-01-15T12:00:00Z",
+        "title": "inpatient Visit",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-002",
+            "capturedAt": "2025-01-15T12:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "patient-demo-001-patient-001",
+          "observation-demo-001-obs-004",
+          "vital-demo-001-vital-006",
+          "vital-demo-001-vital-007",
+          "lab-demo-001-lab-ptt",
+          "lab-demo-001-lab-inr",
+          "medication-demo-001-med-003",
+          "medication-demo-001-med-004",
+          "note-demo-001-note-002",
+          "procedure-demo-001-proc-002",
+          "encounter-demo-001-enc-001",
+          "encounter-demo-001-enc-003"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-ptt",
+        "type": "lab",
+        "timestamp": "2025-01-15T12:30:00Z",
+        "title": "Partial Thromboplastin Time",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-ptt",
+            "capturedAt": "2025-01-15T12:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-inr",
+        "type": "lab",
+        "timestamp": "2025-01-15T12:30:00Z",
+        "title": "INR",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-inr",
+            "capturedAt": "2025-01-15T12:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "observation-demo-001-obs-004",
+        "type": "observation",
+        "timestamp": "2025-01-15T13:00:00Z",
+        "title": "surgical_consent",
+        "summary": "Surgical consent obtained for laparoscopic appendectomy",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-004",
+            "capturedAt": "2025-01-15T13:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "note-demo-001-note-002",
+        "type": "note",
+        "timestamp": "2025-01-15T13:30:00Z",
+        "title": "admission Note",
+        "summary": "Admitting patient for laparoscopic appendectomy. Patient is a 45-year-old female with acute appendicitis confirmed on CT imaging. Pre-operative labs within normal limits. Patient consented for surgery. NPO since midnight. IV antibiotics initiated.",
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-002",
+            "capturedAt": "2025-01-15T13:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-006",
+        "type": "vital",
+        "timestamp": "2025-01-15T14:00:00Z",
+        "title": "Temperature",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-006",
+            "capturedAt": "2025-01-15T14:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-007",
+        "type": "vital",
+        "timestamp": "2025-01-15T14:00:00Z",
+        "title": "Heart Rate",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-007",
+            "capturedAt": "2025-01-15T14:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "medication-demo-001-med-003",
+        "type": "medication",
+        "timestamp": "2025-01-15T14:30:00Z",
+        "title": "Cefazolin",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-003",
+            "capturedAt": "2025-01-15T14:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "medication-demo-001-med-004",
+        "type": "medication",
+        "timestamp": "2025-01-15T14:30:00Z",
+        "title": "Metronidazole",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-004",
+            "capturedAt": "2025-01-15T14:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "procedure-demo-001-proc-002",
+        "type": "procedure",
+        "timestamp": "2025-01-15T15:00:00Z",
+        "title": "Laparoscopic appendectomy",
+        "summary": "Successful removal of inflamed appendix, no complications",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "proc-002",
+            "capturedAt": "2025-01-15T15:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "medication-demo-001-med-005",
+        "type": "medication",
+        "timestamp": "2025-01-16T00:00:00Z",
+        "title": "Acetaminophen",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "med-005",
+            "capturedAt": "2025-01-16T00:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003",
+          "condition-demo-001-cond-002"
+        ]
+      },
+      {
+        "id": "encounter-demo-001-enc-003",
+        "type": "encounter",
+        "timestamp": "2025-01-22T09:00:00Z",
+        "title": "outpatient Visit",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "enc-003",
+            "capturedAt": "2025-01-22T09:00:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "patient-demo-001-patient-001",
+          "observation-demo-001-obs-005",
+          "observation-demo-001-obs-006",
+          "vital-demo-001-vital-008",
+          "lab-demo-001-lab-wbc-fu",
+          "lab-demo-001-lab-crp-fu",
+          "medication-demo-001-med-005",
+          "condition-demo-001-cond-002",
+          "note-demo-001-note-003",
+          "encounter-demo-001-enc-002"
+        ]
+      },
+      {
+        "id": "vital-demo-001-vital-008",
+        "type": "vital",
+        "timestamp": "2025-01-22T09:05:00Z",
+        "title": "Temperature",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "vital-008",
+            "capturedAt": "2025-01-22T09:05:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003"
+        ]
+      },
+      {
+        "id": "observation-demo-001-obs-005",
+        "type": "observation",
+        "timestamp": "2025-01-22T09:15:00Z",
+        "title": "wound_assessment",
+        "summary": "Incision sites clean, dry, and healing well. No signs of infection.",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-005",
+            "capturedAt": "2025-01-22T09:15:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003"
+        ]
+      },
+      {
+        "id": "observation-demo-001-obs-006",
+        "type": "observation",
+        "timestamp": "2025-01-22T09:15:00Z",
+        "title": "pain_score",
+        "summary": "Minimal incisional pain, well controlled with acetaminophen",
+        "evidence": [
+          {
+            "source": "synthetic",
+            "id": "obs-006",
+            "capturedAt": "2025-01-22T09:15:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-wbc-fu",
+        "type": "lab",
+        "timestamp": "2025-01-22T09:30:00Z",
+        "title": "White Blood Cell Count",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-wbc-fu",
+            "capturedAt": "2025-01-22T09:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003"
+        ]
+      },
+      {
+        "id": "lab-demo-001-lab-crp-fu",
+        "type": "lab",
+        "timestamp": "2025-01-22T09:30:00Z",
+        "title": "C-Reactive Protein",
+        "evidence": [
+          {
+            "source": "lab",
+            "id": "lab-crp-fu",
+            "capturedAt": "2025-01-22T09:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003"
+        ]
+      },
+      {
+        "id": "note-demo-001-note-003",
+        "type": "note",
+        "timestamp": "2025-01-22T09:30:00Z",
+        "title": "progress Note",
+        "summary": "Post-operative day 7 follow-up. Patient recovering well from laparoscopic appendectomy. Incisions healing nicely. Pain well controlled. Inflammatory markers normalized. Pathology confirmed acute appendicitis without perforation. Resume normal activities as tolerated. Return if fever, increasing pain, or wound concerns.",
+        "evidence": [
+          {
+            "source": "note",
+            "id": "note-003",
+            "capturedAt": "2025-01-22T09:30:00Z"
+          }
+        ],
+        "relatedNodes": [
+          "encounter-demo-001-enc-003"
+        ]
+      }
+    ],
+    "dateRange": {
+      "start": "2025-01-13T00:00:00Z",
+      "end": "2025-01-22T09:30:00Z"
+    }
+  },
+  "metadata": {
+    "totalNodes": 44,
+    "totalEdges": 49,
+    "nodesByType": {
+      "patient": 1,
+      "encounter": 3,
+      "observation": 6,
+      "vital": 8,
+      "lab": 10,
+      "medication": 5,
+      "condition": 2,
+      "study": 1,
+      "finding": 3,
+      "note": 3,
+      "procedure": 2
+    },
+    "edgesByType": {
+      "observed-in": 40,
+      "derived-from": 3,
+      "matches": 1,
+      "treats": 3,
+      "precedes": 2
+    }
+  }
+}

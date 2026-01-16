@@ -1,0 +1,406 @@
+{
+  "caseId": "demo-001",
+  "patient": {
+    "id": "patient-001",
+    "demographics": {
+      "age": 45,
+      "gender": "female",
+      "birthDate": "1979-03-15",
+      "mrn": "MRN-12345678"
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-001",
+      "type": "ED",
+      "timestamp": "2025-01-15T08:30:00Z",
+      "reason": "Abdominal pain",
+      "observations": [
+        {
+          "id": "obs-001",
+          "type": "chief_complaint",
+          "value": "Abdominal pain, RLQ",
+          "text": "Patient presents with right lower quadrant abdominal pain for 2 days, worsening",
+          "timestamp": "2025-01-15T08:35:00Z"
+        },
+        {
+          "id": "obs-002",
+          "type": "pain_score",
+          "value": 7,
+          "text": "Pain score 7/10",
+          "timestamp": "2025-01-15T08:35:00Z"
+        },
+        {
+          "id": "obs-003",
+          "type": "symptom",
+          "value": "nausea",
+          "text": "Associated nausea, no vomiting",
+          "timestamp": "2025-01-15T08:35:00Z"
+        }
+      ],
+      "vitals": [
+        {
+          "id": "vital-001",
+          "name": "Temperature",
+          "value": 38.2,
+          "unit": "°C",
+          "timestamp": "2025-01-15T08:32:00Z"
+        },
+        {
+          "id": "vital-002",
+          "name": "Heart Rate",
+          "value": 92,
+          "unit": "bpm",
+          "timestamp": "2025-01-15T08:32:00Z"
+        },
+        {
+          "id": "vital-003",
+          "name": "Blood Pressure",
+          "value": 128,
+          "unit": "mmHg",
+          "timestamp": "2025-01-15T08:32:00Z"
+        },
+        {
+          "id": "vital-004",
+          "name": "Respiratory Rate",
+          "value": 18,
+          "unit": "breaths/min",
+          "timestamp": "2025-01-15T08:32:00Z"
+        },
+        {
+          "id": "vital-005",
+          "name": "SpO2",
+          "value": 98,
+          "unit": "%",
+          "timestamp": "2025-01-15T08:32:00Z"
+        }
+      ],
+      "labs": [
+        {
+          "id": "lab-wbc",
+          "name": "White Blood Cell Count",
+          "code": "6690-2",
+          "value": 14.2,
+          "unit": "10^9/L",
+          "referenceRange": { "low": 4.5, "high": 11.0 },
+          "interpretation": "high",
+          "timestamp": "2025-01-15T09:00:00Z"
+        },
+        {
+          "id": "lab-crp",
+          "name": "C-Reactive Protein",
+          "code": "1988-5",
+          "value": 85,
+          "unit": "mg/L",
+          "referenceRange": { "low": 0, "high": 10 },
+          "interpretation": "critical-high",
+          "timestamp": "2025-01-15T09:00:00Z"
+        },
+        {
+          "id": "lab-hgb",
+          "name": "Hemoglobin",
+          "code": "718-7",
+          "value": 13.5,
+          "unit": "g/dL",
+          "referenceRange": { "low": 12.0, "high": 16.0 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-15T09:00:00Z"
+        },
+        {
+          "id": "lab-plt",
+          "name": "Platelet Count",
+          "code": "777-3",
+          "value": 285,
+          "unit": "10^9/L",
+          "referenceRange": { "low": 150, "high": 400 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-15T09:00:00Z"
+        },
+        {
+          "id": "lab-creat",
+          "name": "Creatinine",
+          "code": "2160-0",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "referenceRange": { "low": 0.6, "high": 1.2 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-15T09:00:00Z"
+        },
+        {
+          "id": "lab-lipase",
+          "name": "Lipase",
+          "code": "3040-3",
+          "value": 45,
+          "unit": "U/L",
+          "referenceRange": { "low": 0, "high": 60 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-15T09:00:00Z"
+        }
+      ],
+      "medications": [
+        {
+          "id": "med-001",
+          "name": "Morphine Sulfate",
+          "dosage": "4mg",
+          "route": "IV",
+          "frequency": "PRN",
+          "status": "active",
+          "startDate": "2025-01-15T08:45:00Z"
+        },
+        {
+          "id": "med-002",
+          "name": "Ondansetron",
+          "dosage": "4mg",
+          "route": "IV",
+          "frequency": "once",
+          "status": "completed",
+          "startDate": "2025-01-15T08:50:00Z"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "cond-001",
+          "code": "K35.80",
+          "icdCode": "K35.80",
+          "name": "Acute appendicitis",
+          "status": "active",
+          "severity": "moderate",
+          "onsetDate": "2025-01-13T00:00:00Z"
+        }
+      ],
+      "studies": [
+        {
+          "id": "study-ct-001",
+          "modality": "CT",
+          "bodyPart": "Abdomen/Pelvis",
+          "description": "CT Abdomen and Pelvis with contrast",
+          "accessionNumber": "ACC-2025-001234",
+          "timestamp": "2025-01-15T10:00:00Z",
+          "findings": [
+            {
+              "id": "finding-001",
+              "description": "Enlarged appendix measuring 12mm in diameter with periappendiceal fat stranding",
+              "severity": "moderate",
+              "confidence": 0.92,
+              "anatomy": "Appendix",
+              "crossModalRef": "lab-crp"
+            },
+            {
+              "id": "finding-002",
+              "description": "No free fluid or abscess identified",
+              "severity": "mild",
+              "confidence": 0.95,
+              "anatomy": "Peritoneal cavity"
+            },
+            {
+              "id": "finding-003",
+              "description": "Appendicolith at the base of appendix",
+              "severity": "moderate",
+              "confidence": 0.88,
+              "anatomy": "Appendix"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-001",
+          "type": "progress",
+          "author": "Dr. Smith, ED Attending",
+          "text": "45-year-old female presenting with 2-day history of progressive right lower quadrant abdominal pain. Pain started periumbilically and migrated to RLQ. Associated with nausea, anorexia, and low-grade fever. No vomiting or diarrhea. Physical exam reveals RLQ tenderness with rebound and guarding. Rovsing sign positive. Labs show leukocytosis and elevated CRP. CT scan confirms acute appendicitis with periappendiceal inflammation. Surgical consult placed.",
+          "timestamp": "2025-01-15T10:30:00Z"
+        }
+      ],
+      "procedures": [
+        {
+          "id": "proc-001",
+          "name": "CT-guided imaging",
+          "code": "74177",
+          "status": "completed",
+          "outcome": "Diagnostic images obtained",
+          "timestamp": "2025-01-15T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "enc-002",
+      "type": "inpatient",
+      "timestamp": "2025-01-15T12:00:00Z",
+      "reason": "Surgical admission for appendectomy",
+      "observations": [
+        {
+          "id": "obs-004",
+          "type": "surgical_consent",
+          "value": "obtained",
+          "text": "Surgical consent obtained for laparoscopic appendectomy",
+          "timestamp": "2025-01-15T13:00:00Z"
+        }
+      ],
+      "vitals": [
+        {
+          "id": "vital-006",
+          "name": "Temperature",
+          "value": 37.8,
+          "unit": "°C",
+          "timestamp": "2025-01-15T14:00:00Z"
+        },
+        {
+          "id": "vital-007",
+          "name": "Heart Rate",
+          "value": 78,
+          "unit": "bpm",
+          "timestamp": "2025-01-15T14:00:00Z"
+        }
+      ],
+      "labs": [
+        {
+          "id": "lab-ptt",
+          "name": "Partial Thromboplastin Time",
+          "code": "3173-2",
+          "value": 28,
+          "unit": "seconds",
+          "referenceRange": { "low": 25, "high": 35 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-15T12:30:00Z"
+        },
+        {
+          "id": "lab-inr",
+          "name": "INR",
+          "code": "34714-6",
+          "value": 1.0,
+          "unit": "",
+          "referenceRange": { "low": 0.8, "high": 1.2 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-15T12:30:00Z"
+        }
+      ],
+      "medications": [
+        {
+          "id": "med-003",
+          "name": "Cefazolin",
+          "dosage": "2g",
+          "route": "IV",
+          "frequency": "pre-op",
+          "status": "completed",
+          "startDate": "2025-01-15T14:30:00Z"
+        },
+        {
+          "id": "med-004",
+          "name": "Metronidazole",
+          "dosage": "500mg",
+          "route": "IV",
+          "frequency": "pre-op",
+          "status": "completed",
+          "startDate": "2025-01-15T14:30:00Z"
+        }
+      ],
+      "conditions": [],
+      "studies": [],
+      "notes": [
+        {
+          "id": "note-002",
+          "type": "admission",
+          "author": "Dr. Johnson, Surgery",
+          "text": "Admitting patient for laparoscopic appendectomy. Patient is a 45-year-old female with acute appendicitis confirmed on CT imaging. Pre-operative labs within normal limits. Patient consented for surgery. NPO since midnight. IV antibiotics initiated.",
+          "timestamp": "2025-01-15T13:30:00Z"
+        }
+      ],
+      "procedures": [
+        {
+          "id": "proc-002",
+          "name": "Laparoscopic appendectomy",
+          "code": "44970",
+          "status": "completed",
+          "outcome": "Successful removal of inflamed appendix, no complications",
+          "timestamp": "2025-01-15T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "enc-003",
+      "type": "outpatient",
+      "timestamp": "2025-01-22T09:00:00Z",
+      "reason": "Post-operative follow-up",
+      "observations": [
+        {
+          "id": "obs-005",
+          "type": "wound_assessment",
+          "value": "healing well",
+          "text": "Incision sites clean, dry, and healing well. No signs of infection.",
+          "timestamp": "2025-01-22T09:15:00Z"
+        },
+        {
+          "id": "obs-006",
+          "type": "pain_score",
+          "value": 2,
+          "text": "Minimal incisional pain, well controlled with acetaminophen",
+          "timestamp": "2025-01-22T09:15:00Z"
+        }
+      ],
+      "vitals": [
+        {
+          "id": "vital-008",
+          "name": "Temperature",
+          "value": 36.8,
+          "unit": "°C",
+          "timestamp": "2025-01-22T09:05:00Z"
+        }
+      ],
+      "labs": [
+        {
+          "id": "lab-wbc-fu",
+          "name": "White Blood Cell Count",
+          "code": "6690-2",
+          "value": 7.2,
+          "unit": "10^9/L",
+          "referenceRange": { "low": 4.5, "high": 11.0 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-22T09:30:00Z"
+        },
+        {
+          "id": "lab-crp-fu",
+          "name": "C-Reactive Protein",
+          "code": "1988-5",
+          "value": 8,
+          "unit": "mg/L",
+          "referenceRange": { "low": 0, "high": 10 },
+          "interpretation": "normal",
+          "timestamp": "2025-01-22T09:30:00Z"
+        }
+      ],
+      "medications": [
+        {
+          "id": "med-005",
+          "name": "Acetaminophen",
+          "dosage": "650mg",
+          "route": "PO",
+          "frequency": "q6h PRN",
+          "status": "active",
+          "startDate": "2025-01-16T00:00:00Z"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "cond-002",
+          "code": "K35.80",
+          "icdCode": "K35.80",
+          "name": "Acute appendicitis",
+          "status": "resolved",
+          "severity": "moderate",
+          "onsetDate": "2025-01-13T00:00:00Z"
+        }
+      ],
+      "studies": [],
+      "notes": [
+        {
+          "id": "note-003",
+          "type": "progress",
+          "author": "Dr. Johnson, Surgery",
+          "text": "Post-operative day 7 follow-up. Patient recovering well from laparoscopic appendectomy. Incisions healing nicely. Pain well controlled. Inflammatory markers normalized. Pathology confirmed acute appendicitis without perforation. Resume normal activities as tolerated. Return if fever, increasing pain, or wound concerns.",
+          "timestamp": "2025-01-22T09:30:00Z"
+        }
+      ],
+      "procedures": []
+    }
+  ]
+}
