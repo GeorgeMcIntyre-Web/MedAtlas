@@ -9,15 +9,15 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@medatlas/schemas": "workspace:*",
+    "@medatlas/alignment": "workspace:*",
     "@medatlas/graph": "workspace:*",
     "@medatlas/ingestion": "workspace:*",
-    "@medatlas/alignment": "workspace:*",
-    "@medatlas/reasoning": "workspace:*"
+    "@medatlas/reasoning": "workspace:*",
+    "@medatlas/schemas": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250129.0",
     "typescript": "^5.6.0",
-    "wrangler": "^3.97.0"
+    "wrangler": "^4.59.2"
   }
 }
