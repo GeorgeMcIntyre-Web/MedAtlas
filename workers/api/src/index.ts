@@ -23,7 +23,7 @@ export default {
       return notFound();
     }
 
-    if (url.pathname is "/health") {
+    if (url.pathname === "/health") {
       return json({ status: "ok", app: env.APP_NAME });
     }
 

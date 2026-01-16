@@ -56,6 +56,19 @@ pnpm demo:seed
 - `scripts` – synthetic data + utilities
 - `docs` – vision + pitch + research scope
 
+## 🚀 Agent Implementation Plan
+
+This project is being built by **5 parallel AI agents**. See:
+
+- **Master Plan:** [`docs/agent_implementation_plan.md`](docs/agent_implementation_plan.md)
+- **Coordination Guide:** [`docs/AGENT_COORDINATION.md`](docs/AGENT_COORDINATION.md)
+- **Agent Tasks:**
+  - [Agent 1: Atlas Graph Core](docs/agent_tasks/AGENT_1_ATLAS_GRAPH_CORE.md)
+  - [Agent 2: Timeline UI](docs/agent_tasks/AGENT_2_TIMELINE_UI.md)
+  - [Agent 3: Data Ingestion](docs/agent_tasks/AGENT_3_DATA_INGESTION.md)
+  - [Agent 4: Cross-Modal Alignment](docs/agent_tasks/AGENT_4_CROSS_MODAL_ALIGNMENT.md)
+  - [Agent 5: Reasoning Layer](docs/agent_tasks/AGENT_5_REASONING_LAYER.md)
+
 ## Safety & clinical use
 
 This repository is an **R&D prototype starter**. It is **not** a medical device and must not be used for diagnosis or treatment without proper validation, approvals, and clinical governance.
