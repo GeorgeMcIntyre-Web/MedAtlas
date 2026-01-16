@@ -4,11 +4,15 @@
 
 > **Goal:** unify *all medical data types* (EHR/FHIR, imaging/DICOM, labs, genomics, notes, wearables, claims) into a single **Atlas Graph** that can be queried, explained, audited, and visualized.
 
-## What’s in this starter
+## What's in this starter
 
 - **Cloudflare Pages UI** (React + Vite)
 - **Cloudflare Worker API** (TypeScript)
 - **Shared schemas** (JSON Schema + TypeScript types)
+- **Atlas Graph core** (nodes, edges, queries, timeline)
+- **Ingestion adapters** (synthetic + basic FHIR bundle)
+- **Cross-modal alignment** (imaging/lab/note correlation + evidence chains)
+- **Reasoning layer** (mock model adapter + validator)
 - **Research-grade prompting pack** (MedGemma 1.5 oriented)
 - **Synthetic demo data generator** (minimal, extendable)
 - **Docs** for vision, clinical use-cases, and a stakeholder pitch
@@ -35,6 +39,11 @@ pnpm --filter @medatlas/web dev
 pnpm --filter @medatlas/api dev
 ```
 
+### Smoke tests (Node 22+)
+```bash
+pnpm test:smoke
+```
+
 ### Generate synthetic demo bundle
 ```bash
 pnpm demo:seed
@@ -47,14 +56,25 @@ pnpm demo:seed
 - **Reasoning layer**: model adapters (e.g., MedGemma 1.5), tool-based validation, structured outputs
 - **UX layer**: patient timeline, imaging + text correlation, explainability/audit views
 
+## API endpoints (local)
+
+- **Graph**: `/graph/nodes`, `/graph/edges`, `/graph/timeline/:patientId`, `/graph/serialize`
+- **Demo**: `/demo/cases`, `/demo/case/:caseId`, `/demo/generate`
+- **Alignment**: `/alignment/findings?patientId=`, `/alignment/:findingId`, `/evidence-chain/:nodeId`
+- **Reasoning**: `/reasoning/interpret`, `/reasoning/status/:caseId`, `/reasoning/validate`
+
 ## Repo layout
 
-- `apps/web` – Cloudflare Pages frontend
-- `workers/api` – Cloudflare Worker API
-- `packages/schemas` – JSON Schema + TS types
-- `packages/prompts` – research-grade prompting pack
-- `scripts` – synthetic data + utilities
-- `docs` – vision + pitch + research scope
+- `apps/web` - Cloudflare Pages frontend
+- `workers/api` - Cloudflare Worker API
+- `packages/schemas` - JSON Schema + TS types
+- `packages/graph` - Atlas Graph core
+- `packages/ingestion` - Data adapters
+- `packages/alignment` - Cross-modal alignment utilities
+- `packages/reasoning` - Mock reasoning + validation
+- `packages/prompts` - research-grade prompting pack
+- `scripts` - synthetic data + utilities
+- `docs` - vision + pitch + research scope
 
 ## 🚀 Agent Implementation Plan
 

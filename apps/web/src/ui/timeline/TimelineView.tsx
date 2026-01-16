@@ -42,7 +42,10 @@ export const TimelineView: React.FC<Props> = ({ patientId }) => {
       />
 
       {timeline.filteredEvents.length === 0 ? (
-        <p style={styles.empty}>No events match your filters.</p>
+        <div style={styles.empty}>
+          <p>No events match your filters.</p>
+          <button onClick={timeline.clearFilters} style={styles.resetBtn}>Reset filters</button>
+        </div>
       ) : (
         <div style={styles.timeline}>
           {Array.from(timeline.eventsByDate.entries()).map(([date, events]) => (
@@ -80,5 +83,14 @@ const styles: Record<string, React.CSSProperties> = {
     paddingBottom: 6,
     marginBottom: 8
   },
-  empty: { color: "#64748b", fontStyle: "italic", textAlign: "center", padding: 32 }
+  empty: { color: "#64748b", textAlign: "center", padding: 32 },
+  resetBtn: {
+    marginTop: 8,
+    padding: "8px 16px",
+    borderRadius: 999,
+    border: "1px solid #cbd5e1",
+    backgroundColor: "white",
+    cursor: "pointer",
+    fontSize: 12
+  }
 };

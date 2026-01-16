@@ -11,23 +11,57 @@ type LoadState =
   | { kind: "loaded"; data: MedAtlasOutput }
   | { kind: "error"; message: string };
 
+type DemoCaseSummary = {
+  id: string;
+  patientId: string;
+  description: string;
+  encounterCount: number;
+};
+
 type DemoCaseResponse = {
+  case?: {
+    patient?: { id: string };
+  };
   interpretation?: MedAtlasOutput;
 };
 
 export const App = () => {
   const [state, setState] = useState<LoadState>({ kind: "idle" });
   const [view, setView] = useState<"timeline" | "case" | "alignment">("timeline");
+  const [cases, setCases] = useState<DemoCaseSummary[]>([]);
+  const [caseId, setCaseId] = useState("cardiac-001");
   const [patientId, setPatientId] = useState("patient-001");
 
   const title = useMemo(() => "MedAtlas", []);
 
   useEffect(() => {
     const run = async () => {
+      try {
+        const res = await fetch(`${apiBase}/demo/cases`);
+        if (!res.ok) return;
+        const payload = (await res.json()) as { cases?: DemoCaseSummary[] };
+        if (Array.isArray(payload.cases)) {
+          setCases(payload.cases);
+          const selected = payload.cases.find(item => item.id === caseId) ?? payload.cases[0];
+          if (selected) {
+            setCaseId(selected.id);
+            setPatientId(selected.patientId);
+          }
+        }
+      } catch {
+        // Leave default case selection if demo case list fails.
+      }
+    };
+
+    void run();
+  }, []);
+
+  useEffect(() => {
+    const run = async () => {
       setState({ kind: "loading" });
 
       try {
-        const res = await fetch(`${apiBase}/demo/case`);
+        const res = await fetch(`${apiBase}/demo/case/${caseId}`);
 
         if (!res.ok) {
           setState({ kind: "error", message: `API error: ${res.status}` });
@@ -39,6 +73,9 @@ export const App = () => {
           setState({ kind: "error", message: "Missing interpretation in demo response." });
           return;
         }
+        if (json.case?.patient?.id) {
+          setPatientId(json.case.patient.id);
+        }
         setState({ kind: "loaded", data: json.interpretation });
       } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
@@ -47,18 +84,31 @@ export const App = () => {
     };
 
     void run();
-  }, []);
+  }, [caseId]);
 
   return (
-    <div style={styles.shell}>
+    <div className="ma-shell" style={styles.shell}>
       <style>{`
         @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+        :root {
+          --ink: #0f172a;
+          --muted: #64748b;
+          --panel: #ffffff;
+          --stroke: #e2e8f0;
+          --wash: #f8fafc;
+        }
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(12px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        @media (max-width: 960px) {
+          .ma-header { flex-direction: column; align-items: flex-start; }
+          .ma-nav { margin-left: 0; }
+          .ma-meta { width: 100%; }
+          .ma-main { padding: 16px; }
+        }
       `}</style>
-      <header style={styles.header}>
+      <header className="ma-header" style={styles.header}>
         <div style={styles.brand}>
           <div style={styles.logoMark}>MA</div>
           <div>
@@ -66,7 +116,7 @@ export const App = () => {
             <p style={styles.tagline}>Clinical graph intelligence for rapid navigation.</p>
           </div>
         </div>
-        <nav style={styles.nav}>
+        <nav className="ma-nav" style={styles.nav}>
           <button onClick={() => setView("timeline")} style={view === "timeline" ? styles.activeTab : styles.tab}>
             Timeline
           </button>
@@ -77,12 +127,23 @@ export const App = () => {
             Alignment
           </button>
         </nav>
-        <select value={patientId} onChange={(e) => setPatientId(e.target.value)} style={styles.select}>
-          <option value="patient-001">Demo Patient</option>
-        </select>
+        <div className="ma-meta" style={styles.meta}>
+          <span style={styles.metaLabel}>Case</span>
+          <select value={caseId} onChange={(e) => setCaseId(e.target.value)} style={styles.select}>
+            {cases.length === 0 ? (
+              <option value={caseId}>Loading...</option>
+            ) : (
+              cases.map(item => (
+                <option key={item.id} value={item.id}>
+                  {item.id} · {item.description}
+                </option>
+              ))
+            )}
+          </select>
+        </div>
       </header>
 
-      <main style={styles.main}>
+      <main className="ma-main" style={styles.main}>
         {view === "timeline" ? (
           <TimelineView patientId={patientId} />
         ) : null}
@@ -190,6 +251,8 @@ const styles: Record<string, React.CSSProperties> = {
   logo: { margin: 0, fontSize: 20, fontWeight: 700 },
   tagline: { margin: 0, fontSize: 12, color: "#64748b" },
   nav: { display: "flex", gap: 8, marginLeft: 16, flexWrap: "wrap" },
+  meta: { marginLeft: "auto", display: "flex", flexDirection: "column", gap: 6 },
+  metaLabel: { fontSize: 11, textTransform: "uppercase", letterSpacing: 1, color: "#94a3b8" },
   tab: {
     padding: "8px 16px",
     background: "none",
@@ -209,7 +272,6 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 600
   },
   select: {
-    marginLeft: "auto",
     padding: "8px 12px",
     borderRadius: 10,
     border: "1px solid #e2e8f0",

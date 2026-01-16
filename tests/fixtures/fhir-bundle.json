@@ -1,0 +1,53 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-fhir-001",
+        "gender": "female",
+        "birthDate": "1980-01-01",
+        "identifier": [{ "system": "mrn", "value": "MRN-2001" }],
+        "name": [{ "text": "Ada Lovelace" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-fhir-001",
+        "status": "finished",
+        "class": { "code": "ED" },
+        "period": { "start": "2025-01-05T10:00:00Z" },
+        "reasonCode": [{ "text": "Shortness of breath" }],
+        "subject": { "reference": "Patient/patient-fhir-001" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-fhir-001",
+        "status": "final",
+        "category": [
+          { "coding": [{ "code": "laboratory", "display": "Laboratory" }] }
+        ],
+        "code": { "text": "BNP" },
+        "valueQuantity": { "value": 520, "unit": "pg/mL" },
+        "interpretation": [{ "coding": [{ "code": "H" }] }],
+        "effectiveDateTime": "2025-01-05T10:15:00Z",
+        "subject": { "reference": "Patient/patient-fhir-001" },
+        "encounter": { "reference": "Encounter/enc-fhir-001" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-fhir-001",
+        "clinicalStatus": { "coding": [{ "code": "active" }] },
+        "code": { "text": "Heart failure" },
+        "subject": { "reference": "Patient/patient-fhir-001" },
+        "encounter": { "reference": "Encounter/enc-fhir-001" }
+      }
+    }
+  ]
+}

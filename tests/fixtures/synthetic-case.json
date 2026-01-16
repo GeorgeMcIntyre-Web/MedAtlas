@@ -1,0 +1,67 @@
+{
+  "caseId": "fixture-001",
+  "patient": {
+    "id": "patient-fixture-001",
+    "demographics": {
+      "age": 45,
+      "gender": "female",
+      "mrn": "MRN-0001"
+    }
+  },
+  "encounters": [
+    {
+      "id": "enc-fixture-001",
+      "type": "ED",
+      "timestamp": "2025-01-02T09:30:00.000Z",
+      "reason": "Headache",
+      "labs": [
+        {
+          "id": "lab-fixture-001",
+          "name": "CRP",
+          "value": 12,
+          "unit": "mg/L",
+          "referenceRange": { "low": 0, "high": 10 },
+          "isAbnormal": true
+        }
+      ],
+      "studies": [
+        {
+          "id": "study-fixture-001",
+          "modality": "CT",
+          "bodyPart": "Head",
+          "findings": [
+            {
+              "id": "finding-fixture-001",
+              "description": "Small calcified focus",
+              "severity": "mild",
+              "confidence": 0.61,
+              "anatomy": "Left temporal lobe"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-fixture-001",
+          "type": "admission",
+          "text": "Patient reports sudden headache after exercise."
+        }
+      ],
+      "medications": [
+        {
+          "id": "med-fixture-001",
+          "name": "Acetaminophen 500mg",
+          "status": "active"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "cond-fixture-001",
+          "name": "Tension headache",
+          "status": "active",
+          "severity": "mild"
+        }
+      ]
+    }
+  ]
+}

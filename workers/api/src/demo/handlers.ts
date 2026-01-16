@@ -41,6 +41,7 @@ export async function handleListDemoCases(): Promise<Response> {
   return json({
     cases: Object.entries(DEMO_CASES).map(([id, demoCase]) => ({
       id,
+      patientId: demoCase.patient.id,
       description: `${demoCase.patient.demographics.age}yo ${demoCase.patient.demographics.gender}`,
       encounterCount: demoCase.encounters.length
     }))
@@ -52,6 +53,7 @@ export async function handleGenerateDemoCase(): Promise<Response> {
   const newId = `demo-${crypto.randomUUID()}`;
   const patientId = `patient-${crypto.randomUUID()}`;
   const now = new Date().toISOString();
+  const nextId = (prefix: string) => `${prefix}-${crypto.randomUUID()}`;
 
   const generated = {
     ...base,
@@ -66,8 +68,35 @@ export async function handleGenerateDemoCase(): Promise<Response> {
     },
     encounters: base.encounters.map(enc => ({
       ...enc,
-      id: `enc-${crypto.randomUUID()}`,
-      timestamp: now
+      id: nextId("enc"),
+      timestamp: now,
+      labs: enc.labs.map(lab => ({
+        ...lab,
+        id: nextId("lab"),
+        timestamp: lab.timestamp ?? now
+      })),
+      studies: enc.studies.map(study => ({
+        ...study,
+        id: nextId("study"),
+        timestamp: study.timestamp ?? now,
+        findings: study.findings.map(finding => ({
+          ...finding,
+          id: nextId("finding")
+        }))
+      })),
+      notes: enc.notes.map(note => ({
+        ...note,
+        id: nextId("note"),
+        timestamp: note.timestamp ?? now
+      })),
+      medications: enc.medications.map(med => ({
+        ...med,
+        id: nextId("med")
+      })),
+      conditions: enc.conditions.map(cond => ({
+        ...cond,
+        id: nextId("cond")
+      }))
     }))
   };
 

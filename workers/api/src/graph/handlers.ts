@@ -1,5 +1,7 @@
 import type { GraphNode, GraphEdge, NodeFilter, EdgeFilter, TimelineResponse } from "@medatlas/graph/types";
-import { AtlasGraph, NodeFactory, EdgeFactory } from "@medatlas/graph";
+import { AtlasGraph } from "@medatlas/graph";
+import { SyntheticAdapter } from "@medatlas/ingestion";
+import { DEMO_CASES } from "../demo/demo-cases";
 
 type EvidenceChainStep = {
   nodeId: string;
@@ -27,61 +29,31 @@ const json = (value: unknown, init?: ResponseInit) =>
 
 // Global demo graph instance
 const demoGraph = new AtlasGraph("demo-graph");
+const syntheticAdapter = new SyntheticAdapter();
 
 // Initialize with demo data
 function initDemoGraph() {
   if (demoGraph.nodeCount > 0) return;
 
-  const patientId = "patient-001";
-  const now = new Date();
+  const graphs = Object.values(DEMO_CASES).map(demoCase =>
+    syntheticAdapter.transform(demoCase, demoCase.caseId)
+  );
 
-  demoGraph.addNode(NodeFactory.patient(patientId, "Demo Patient", {
-    age: 55,
-    gender: "male",
-    mrn: "MRN-12345"
-  }));
+  for (const graph of graphs) {
+    for (const node of graph.nodes) {
+      demoGraph.addNode(node);
+    }
+  }
 
-  const encounterId = "encounter-001";
-  demoGraph.addNode(NodeFactory.encounter(
-    encounterId,
-    "ED Visit",
-    patientId,
-    new Date(now.getTime() - 86400000).toISOString(),
-    { reason: "Chest pain", type: "ED" }
-  ));
-
-  demoGraph.addNode(NodeFactory.lab(
-    "lab-001",
-    "Troponin I",
-    patientId,
-    new Date(now.getTime() - 82800000).toISOString(),
-    0.15,
-    "ng/mL",
-    { referenceRange: { low: 0, high: 0.04 }, isAbnormal: true }
-  ));
-
-  demoGraph.addNode(NodeFactory.study(
-    "study-001",
-    "Chest CT",
-    patientId,
-    new Date(now.getTime() - 79200000).toISOString(),
-    { modality: "CT", bodyPart: "Chest" }
-  ));
-
-  demoGraph.addNode(NodeFactory.finding(
-    "finding-001",
-    "Pulmonary Nodule",
-    patientId,
-    new Date(now.getTime() - 79200000).toISOString(),
-    0.72,
-    { anatomy: "Right upper lobe", size: "8mm" },
-    [{ source: "dicom", id: "study-001-series-1" }]
-  ));
-
-  demoGraph.addEdge(EdgeFactory.belongsTo("edge-001", encounterId, patientId));
-  demoGraph.addEdge(EdgeFactory.observedIn("edge-002", "lab-001", encounterId));
-  demoGraph.addEdge(EdgeFactory.observedIn("edge-003", "study-001", encounterId));
-  demoGraph.addEdge(EdgeFactory.hasFinding("edge-004", "study-001", "finding-001"));
+  for (const graph of graphs) {
+    for (const edge of graph.edges) {
+      try {
+        demoGraph.addEdge(edge);
+      } catch {
+        // Skip edges whose nodes are missing to keep demo graph resilient.
+      }
+    }
+  }
 }
 
 initDemoGraph();

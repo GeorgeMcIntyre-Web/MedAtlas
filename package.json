@@ -6,7 +6,8 @@
     "demo:seed": "node scripts/seed-demo.mjs",
     "format": "prettier . --write",
     "lint": "eslint .",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "test:smoke": "node --test --experimental-strip-types tests/*.test.ts"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
